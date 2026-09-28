@@ -16,6 +16,9 @@ For ChatGPT, a local stdio MCP process is not a remote connection. Your organiza
 
 ## Install the public package
 
+See the [free distribution and ChatGPT access assessment](DISTRIBUTION.md) for
+the proposed public-engine rollout and the remaining connection and review requirements.
+
 Download the ZIP and `plugin-package.json` from [Releases](https://github.com/yannickhuchard/air-plugin/releases). Verify the ZIP's SHA-256 before extracting the `air-local` folder. Install it through your client's supported local-plugin flow.
 
 For a Git marketplace in Codex:
