@@ -2,6 +2,13 @@
 
 This directory contains preparation material, **not evidence of submission or approval**.
 
+Portal check on 2026-09-29: sign-in succeeded, but creating a plugin was blocked
+before upload by: "You need a verified developer identity before you can create
+or upload a plugin." No draft was created and no package was uploaded. The
+publisher must complete verification under Organization settings / General /
+Verifications. The account displayed only the "With MCP" creation route;
+eligibility of the local AIR workflow remains unresolved after identity verification.
+
 - Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
 - Candidate route: a skills package, subject to review of its dependency on local AIR execution and a separately configured MCP connection.
 - No universal MCP URL is offered. No developer tunnel or existing integration ID is submitted as a replacement for a supported server.
