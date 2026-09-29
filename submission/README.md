@@ -2,6 +2,16 @@
 
 This directory contains preparation material, **not evidence of submission or approval**.
 
+Update on 2026-09-30: developer identity is **Verified** and an AIR — Architecture
+Workspace 0.1.4 draft was created. The listing, official verified identity,
+Productivity category, public links and icons are saved. It is **not submitted**.
+Three starter prompts and release notes are saved too. Both unchanged 0.1.4
+skills were uploaded as individual ZIPs and are undergoing OpenAI safety scanning
+(up to two hours indicated; no successful scan result claimed).
+The accessible route requires one MCP URL for every user; support for the
+per-installation AIR connection remains unresolved. A Developer Mode demonstration
+video and public-route acceptance tests remain required.
+
 Portal check on 2026-09-29: sign-in succeeded, but creating a plugin was blocked
 before upload by: "You need a verified developer identity before you can create
 or upload a plugin." No draft was created and no package was uploaded. The

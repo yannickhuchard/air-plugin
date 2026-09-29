@@ -16,7 +16,8 @@
     "Prepare architecture handoff materials from this AIR baseline."
   ],
   "countries": "PUBLISHER_SELECTION_REQUIRED",
-  "verified_developer_identity": "PORTAL_VERIFICATION_REQUIRED",
+  "verified_developer_identity": "VERIFIED_IN_PORTAL_2026_09_30",
+  "portal_draft_status": "CREATED",
   "submission_status": "NOT_SUBMITTED",
   "eligibility": "LOCAL_EXECUTION_REVIEW_REQUIRED",
   "engine_reviewer_access": "PUBLIC_SOURCE_AVAILABLE_REMOTE_REVIEW_PENDING",
