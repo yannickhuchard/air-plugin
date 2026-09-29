@@ -8,6 +8,8 @@ Productivity category, public links and icons are saved. It is **not submitted**
 Three starter prompts and release notes are saved too. Both unchanged 0.1.4
 skills were uploaded as individual ZIPs and are undergoing OpenAI safety scanning
 (up to two hours indicated; no successful scan result claimed).
+Follow-up the same day: both `air-local-design` and `air-local-setup` now show
+**Passed** in the portal. This is the skill scan result, not directory approval.
 The accessible route requires one MCP URL for every user; support for the
 per-installation AIR connection remains unresolved. A Developer Mode demonstration
 video and public-route acceptance tests remain required.
@@ -19,6 +21,12 @@ publisher has completed the identity check; Organization settings / General /
 Verifications now displays "Identity in review". Plugin creation was retried and
 remains blocked pending OpenAI approval. The account displayed only the "With MCP" creation route;
 eligibility of the local AIR workflow remains unresolved after identity verification.
+
+Next-step material: [OpenAI clarification draft](openai-clarification.md),
+[demonstration runbook](demo-runbook.md), and the engine's
+[second-workstation kit](https://github.com/yannickhuchard/air-engine/blob/main/docs/reception-second-poste.md).
+The clarification message is prepared, not sent. The public-route video and
+review cases remain unexecuted until the connection route is established.
 
 - Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
 - Candidate route: a skills package, subject to review of its dependency on local AIR execution and a separately configured MCP connection.

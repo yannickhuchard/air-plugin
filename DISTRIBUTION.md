@@ -1,6 +1,6 @@
 # Free distribution and ChatGPT access
 
-Updated: 29 September 2026. Official developer: **Yannick Huchard**.
+Updated: 30 September 2026. Official developer: **Yannick Huchard**.
 
 AIR is intended to be freely distributable under Apache-2.0, with architecture
 dossiers stored in installations controlled by each architect or enterprise.
@@ -12,13 +12,15 @@ is not part of the initial distribution plan.
 - This plugin repository and the 0.1.4 package are public.
 - The [AIR engine](https://github.com/yannickhuchard/air-engine) is now a separate public distribution, with rc9 sources, installation tools and three synthetic Asteria dossiers. Consult its release validation for the tested scope.
 - The plugin is **not submitted or approved** in the official OpenAI directory.
+- Publisher identity is verified; a draft is saved and both skills passed automated scanning.
+- A [second-workstation reception kit](https://github.com/yannickhuchard/air-engine/blob/main/docs/reception-second-poste.md) is available; its developer-machine rehearsal is distinct from external reception.
 - Installing the skills does not install the engine or connect a workstation to ChatGPT.
 
 ## Intended routes
 
 | Route | How it works | Remaining work |
 | --- | --- | --- |
-| Local agentic IDE | Install AIR locally; use CLI or MCP stdio | Public engine distribution and clean-machine acceptance |
+| Local agentic IDE | Install AIR locally; use CLI or MCP stdio | Actual second-device and native-client acceptance |
 | Individually configured ChatGPT connection | An authorized tunnel or reachable HTTPS MCP endpoint connects to the installation | Confirm account support, qualify onboarding and isolation |
 | Public ChatGPT directory plugin | Reviewed MCP deployment or explicitly supported local connection | OpenAI eligibility, authentication, review and publication |
 
@@ -28,8 +30,8 @@ An IDE with terminal access can automate the documented installation; web plugin
 installation alone does not deploy Python or AIR on a workstation.
 
 The [OpenAI submission process](https://developers.openai.com/plugins/deploy/submission)
-requires a stable public HTTPS endpoint for remote MCP submissions. Workspace-specific
-template URLs require prior approval; arbitrary per-user URLs are not an established
+requires a stable public HTTPS endpoint for remote MCP submissions. The observed
+account UI offers one common MCP URL; arbitrary per-user URLs are not an established
 public distribution path for AIR. The [migration guidance](https://developers.openai.com/plugins/guides/submit-claude-plugin)
 asks developers to contact OpenAI when the core workflow needs local execution.
 A skills-only submission cannot simply refer to a separately configured MCP integration.
