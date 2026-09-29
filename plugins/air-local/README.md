@@ -6,8 +6,8 @@ Plugin officiel du projet **AIR — Architecture Intermediate Representation**.
 **Auteur et développeur officiel : Yannick Huchard.**
 
 - Source publique du plugin : https://github.com/yannickhuchard/air-plugin
-- Dépôt du moteur (accès séparé) : https://github.com/yannickhuchard/air
-- Identifiant : `air-local` ; version du plugin : **0.1.3**.
+- Dépôt du moteur (accès séparé) : https://github.com/yannickhuchard/air-engine
+- Identifiant : `air-local` ; version du plugin : **0.1.4**.
 - Licence : **Apache-2.0**, confirmée par Yannick Huchard le 28 septembre 2026 ; voir `LICENSE` et `NOTICE`.
 - Moteur associé à cette livraison : **0.34.0rc9**, qualifié séparément du plugin.
 - Deux skills : installation/connexion locale et travail sur un dossier d'architecture.
@@ -22,11 +22,10 @@ structurel et un nœud de modèle ; il a été créé pour AIR avec assistance g
 
 ## Installation et prérequis publics
 
-Le paquet est public ; le moteur AIR reste actuellement dans un dépôt privé.
-Avant une première installation du moteur, obtenir un accès ou une distribution
-approuvée du développeur. Une licence Apache-2.0 ne constitue pas une autorisation
-d’accès GitHub. Sans moteur accessible ou connexion MCP utilisable, le plugin
-doit expliquer ce prérequis et ne peut pas vérifier ni écrire un dossier AIR.
+Le plugin et le moteur sont distribués publiquement, dans des dépôts séparés.
+Télécharger le moteur depuis https://github.com/yannickhuchard/air-engine puis suivre
+son guide d’installation et les trois dossiers Asteria inclus. Sans moteur installé
+et connexion MCP utilisable, le plugin ne peut pas vérifier ni écrire un dossier AIR.
 
 Support : [GitHub Issues](https://github.com/yannickhuchard/air-plugin/issues).
 [Confidentialité](https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md) ·
@@ -45,8 +44,7 @@ Ouvrir ensuite une nouvelle conversation et demander :
 Le skill `air-local-setup` utilise l'installateur Python et `air ide-setup` du dépôt
 officiel. Il conserve la connexion MCP au niveau du projet : aucun serveur global,
 jeton, identifiant de tunnel ou chemin propre au développeur n'est distribué.
-Le moteur n'est pas inclus dans ce petit paquet de skills. L'accès au dépôt ou à
-une distribution du moteur doit être accordé séparément lorsqu'il est privé.
+Le moteur n'est pas inclus dans ce petit paquet de skills. La distribution publique du moteur est disponible sans invitation GitHub.
 La branche principale peut contenir une version de développement : sélectionner
 la version du moteur reçue par l'entreprise, indépendamment de celle du plugin.
 

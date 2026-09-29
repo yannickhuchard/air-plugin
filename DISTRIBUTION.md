@@ -1,6 +1,6 @@
 # Free distribution and ChatGPT access
 
-Assessment: 28 September 2026. Official developer: **Yannick Huchard**.
+Updated: 29 September 2026. Official developer: **Yannick Huchard**.
 
 AIR is intended to be freely distributable under Apache-2.0, with architecture
 dossiers stored in installations controlled by each architect or enterprise.
@@ -9,9 +9,8 @@ is not part of the initial distribution plan.
 
 ## Available today
 
-- This plugin repository and the 0.1.3 package are public.
-- The AIR engine is a separate dependency and its repository is currently private.
-  Public, invitation-free engine installation is therefore **not available yet**.
+- This plugin repository and the 0.1.4 package are public.
+- The [AIR engine](https://github.com/yannickhuchard/air-engine) is now a separate public distribution, with rc9 sources, installation tools and three synthetic Asteria dossiers. Consult its release validation for the tested scope.
 - The plugin is **not submitted or approved** in the official OpenAI directory.
 - Installing the skills does not install the engine or connect a workstation to ChatGPT.
 
@@ -56,7 +55,7 @@ continue to work without a mandatory external identity provider.
 6. Validate the guide with an external architect and expand platform support.
 
 These are planned acceptance steps, not completed milestones. The current package
-remains 0.1.3; this document does not change its qualification.
+remains 0.1.4; this document does not change its qualification.
 
 ## Ownership and costs
 

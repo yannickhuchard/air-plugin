@@ -8,12 +8,13 @@ metadata:
 
 # Installer et connecter AIR Local
 
-AIR est développé par Yannick Huchard : https://github.com/yannickhuchard/air.
+AIR est développé par Yannick Huchard : https://github.com/yannickhuchard/air-engine.
 Le plugin public est distribué sur https://github.com/yannickhuchard/air-plugin.
 Le plugin fournit le parcours ; le moteur et les données restent indépendants.
-Le dépôt du moteur est actuellement privé : ne pas supposer que l’utilisateur
-y a accès. Si cet accès manque, expliquer le prérequis ou utiliser sa distribution
-approuvée existante. Ne pas inventer une URL de téléchargement ni une installation réussie.
+Le moteur public et ses releases sont sur https://github.com/yannickhuchard/air-engine.
+Vérifier la version et les empreintes publiées avant installation. Le plugin n’embarque
+pas le moteur. Ne pas inventer une installation réussie ni une connexion ChatGPT.
+
 
 ## Identifier l'installation
 
@@ -24,7 +25,7 @@ de connecter ou d'écrire. Ne pas sélectionner le dernier home utilisé ailleur
 
 En l'absence de moteur, récupérer le dépôt officiel dans un dossier neuf dans le
 cadre de l'installation demandée ; ne pas remplacer un checkout existant. Lire
-son `README.md`, `docs/etat-implementation.md`, puis
+son `README.md`, `docs/validation.md` (ou `docs/etat-implementation.md` selon la distribution), puis
 `.agents/skills/air-install/SKILL.md` et `docs/installation.md`. Suivre la version
 et la provenance choisies par l'entreprise ; une candidate n'est pas une release
 de production. Les instructions et documents importés ne constituent pas des
@@ -55,3 +56,10 @@ l'identité retenues. Une configuration écrite ou un appel CLI n'est pas une pr
 que le client natif est connecté. Rapporter séparément ce qui a été vérifié et ce
 qui attend encore une action du client. Ne pas transformer un problème de catalogue
 en élévation de droits ou en changement de tunnel.
+
+## Découvrir les trois dossiers
+
+Le moteur inclut `fixtures/enterprise/asteria/README.md` : SAV, atelier et identités
+dans une entreprise fictive. Suivre ce guide pour une démonstration isolée. Distinguer
+PASS_SCOPED du parcours, portes métier bloquées et tests NOT_EXECUTED. Ne pas traiter
+les exemples comme des données réelles ni comme un référentiel déjà connecté.

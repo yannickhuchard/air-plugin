@@ -4,13 +4,13 @@
 
 Official architecture workflow plugin by **Yannick Huchard**. Apache-2.0.
 
-Design, verify, simulate and prepare architecture dossiers for engineers, project managers and operations using an AIR installation controlled by your enterprise. AIR means Architecture Intermediate Representation. The stable plugin identifier is `air-local`; this public package is **0.1.3**.
+Design, verify, simulate and prepare architecture dossiers for engineers, project managers and operations using an AIR installation controlled by your enterprise. AIR means Architecture Intermediate Representation. The stable plugin identifier is `air-local`; this public package is **0.1.4**.
 
 ## What is public, and what is required
 
 This repository contains the plugin's two skills, logo, manifests, license, packaging code and public documentation. It contains no enterprise data, tokens, runtime database, private repository history or shared MCP server.
 
-**The AIR engine is a separate prerequisite. Its source repository is currently private.** Obtain authorized access or an approved engine distribution from the publisher before installation. For a dossier workflow, connect your organization's AIR MCP service separately. Installing this plugin does not grant engine access or automatically connect a workstation to ChatGPT.
+**The AIR engine is a separate public prerequisite:** [sources and releases](https://github.com/yannickhuchard/air-engine). Install a reviewed engine release and explore the three included synthetic Asteria dossiers. For a dossier workflow, connect your organization's AIR MCP service separately. Installing this plugin does not grant engine access or automatically connect a workstation to ChatGPT.
 
 For ChatGPT, a local stdio MCP process is not a remote connection. Your organization needs an authorized remote MCP connection and a deployment accepted by the client. The current plugin is not listed or approved in the official ChatGPT/Codex directory. Its local-engine dependency requires review for that publication channel.
 

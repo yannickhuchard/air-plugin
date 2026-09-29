@@ -2,10 +2,10 @@
 
 This directory contains preparation material, **not evidence of submission or approval**.
 
-- Public package: AIR — Architecture Workspace 0.1.3, developed by Yannick Huchard.
+- Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
 - Candidate route: a skills package, subject to review of its dependency on local AIR execution and a separately configured MCP connection.
 - No universal MCP URL is offered. No developer tunnel or existing integration ID is submitted as a replacement for a supported server.
-- The AIR engine is currently private. Reviewer access to a synthetic engine environment or an approved distributable fixture still needs to be arranged; do not claim those prerequisites are supplied.
+- The AIR engine and its Asteria fixtures are public at https://github.com/yannickhuchard/air-engine. A reviewer-ready ChatGPT connection still needs to be arranged; public sources alone do not supply a remote review environment.
 - Developer identity verification, organization, country availability and policy attestations must be completed in the authenticated portal. They are not inferred from a GitHub profile or local tests.
 - The test cases in `test-cases.json` are review scenarios with expected outcomes, not test results.
 
