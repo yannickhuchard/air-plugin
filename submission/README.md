@@ -5,8 +5,9 @@ This directory contains preparation material, **not evidence of submission or ap
 Portal check on 2026-09-29: sign-in succeeded, but creating a plugin was blocked
 before upload by: "You need a verified developer identity before you can create
 or upload a plugin." No draft was created and no package was uploaded. The
-publisher must complete verification under Organization settings / General /
-Verifications. The account displayed only the "With MCP" creation route;
+publisher has completed the identity check; Organization settings / General /
+Verifications now displays "Identity in review". Plugin creation was retried and
+remains blocked pending OpenAI approval. The account displayed only the "With MCP" creation route;
 eligibility of the local AIR workflow remains unresolved after identity verification.
 
 - Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
