@@ -30,11 +30,16 @@ An IDE with terminal access can automate the documented installation; web plugin
 installation alone does not deploy Python or AIR on a workstation.
 
 The [OpenAI submission process](https://developers.openai.com/plugins/deploy/submission)
-requires a stable public HTTPS endpoint for remote MCP submissions. The observed
-account UI offers one common MCP URL; arbitrary per-user URLs are not an established
-public distribution path for AIR. The [migration guidance](https://developers.openai.com/plugins/guides/submit-claude-plugin)
+supports ZIP uploads and skills-only submissions; remote MCP submissions require
+a stable public HTTPS endpoint. A second portal check on 30 September now exposes
+the ZIP upload flow, superseding our earlier observation of an MCP-only form.
+The [migration guidance](https://developers.openai.com/plugins/guides/submit-claude-plugin)
 asks developers to contact OpenAI when the core workflow needs local execution.
-A skills-only submission cannot simply refer to a separately configured MCP integration.
+This is not a categorical prohibition of every local-use plugin. AIR's current
+design skill depends on a separately configured MCP integration, so skills-only
+packaging alone does not establish eligibility. A clarification request has been
+sent through authenticated OpenAI support; a local CLI-only variant is also part
+of the question. No product-specific eligibility approval has been received.
 
 For remote access to private dossiers, the connection must meet the supported
 [MCP authentication requirements](https://developers.openai.com/plugins/build/auth).

@@ -10,9 +10,11 @@ skills were uploaded as individual ZIPs and are undergoing OpenAI safety scannin
 (up to two hours indicated; no successful scan result claimed).
 Follow-up the same day: both `air-local-design` and `air-local-setup` now show
 **Passed** in the portal. This is the skill scan result, not directory approval.
-The accessible route requires one MCP URL for every user; support for the
-per-installation AIR connection remains unresolved. A Developer Mode demonstration
-video and public-route acceptance tests remain required.
+Second check the same day: the portal now offers ZIP uploads for new or existing
+plugins. The earlier MCP-only form observation is historical. Skills-only plugins
+are documented, but AIR's local execution and separately configured MCP dependency
+still require eligibility clarification. A demonstration video and public-route
+acceptance tests remain required.
 
 Portal check on 2026-09-29: sign-in succeeded, but creating a plugin was blocked
 before upload by: "You need a verified developer identity before you can create
@@ -22,10 +24,13 @@ Verifications now displays "Identity in review". Plugin creation was retried and
 remains blocked pending OpenAI approval. The account displayed only the "With MCP" creation route;
 eligibility of the local AIR workflow remains unresolved after identity verification.
 
-Next-step material: [OpenAI clarification draft](openai-clarification.md),
+Next-step material: [OpenAI clarification request](openai-clarification.md),
 [demonstration runbook](demo-runbook.md), and the engine's
 [second-workstation kit](https://github.com/yannickhuchard/air-engine/blob/main/docs/reception-second-poste.md).
-The clarification message is prepared, not sent. The public-route video and
+The clarification was sent through authenticated OpenAI support on 2026-09-30,
+and escalation to a support specialist was confirmed. A response is pending;
+no eligibility approval is claimed.
+The public-route video and
 review cases remain unexecuted until the connection route is established.
 
 - Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
