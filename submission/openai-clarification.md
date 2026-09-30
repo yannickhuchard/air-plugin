@@ -16,6 +16,13 @@ No eligibility, runtime surface, local MCP support or directory approval was gra
 No further information was required at the time of the reply. Preparation is in
 [cli-review.md](cli-review.md). The original request and dispatch history follow.
 
+Follow-up sent in the same authenticated support conversation on 30 September:
+the [0.1.5 CLI candidate](https://github.com/yannickhuchard/air-plugin/releases/tag/air-local-v0.1.5-cli),
+reviewer guide and technical receipt were supplied as public links. The message
+requests confirmation of eligible execution surfaces and the exact migration
+route for the preserved draft. Imported-client prompt cases and recording remain
+outstanding. Sending this follow-up does not constitute directory submission.
+
 Status: SENT through authenticated help.openai.com support on 2026-09-30,
 on behalf of Yannick Huchard, official AIR developer. Human escalation confirmed.
 This public record summarizes the request without private portal identifiers.
