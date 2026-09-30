@@ -1,0 +1,42 @@
+{
+  "name": "air-local",
+  "version": "0.1.5",
+  "description": "AIR — Architecture Workspace : conception, vérification et simulation via la CLI du moteur AIR local installé séparément.",
+  "author": {
+    "name": "Yannick Huchard",
+    "url": "https://github.com/yannickhuchard"
+  },
+  "homepage": "https://github.com/yannickhuchard/air-plugin",
+  "repository": "https://github.com/yannickhuchard/air-plugin",
+  "keywords": [
+    "architecture",
+    "air",
+    "local",
+    "sqlite",
+    "cli"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AIR — Architecture Workspace",
+    "shortDescription": "Concevoir et vérifier vos architectures avec AIR.",
+    "longDescription": "Développé par Yannick Huchard. Skills utilisant la CLI AIR locale, avec Python et moteur AIR installés séparément. SQLite et identité locale par défaut. Exécution locale et fichiers du projet nécessaires. Aucun MCP requis par cette variante. Éligibilité annuaire et surfaces OpenAI en revue spécifique ; aucune installation automatique du moteur ni disponibilité universelle ChatGPT annoncée.",
+    "developerName": "Yannick Huchard",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/yannickhuchard/air-plugin",
+    "defaultPrompt": [
+      "Installe AIR pour le référentiel de cette entreprise.",
+      "Vérifie ce dossier AIR et prépare ses prochaines étapes.",
+      "Prépare les livrables de cette architecture AIR."
+    ],
+    "brandColor": "#00BFC1",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png",
+    "privacyPolicyURL": "https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/yannickhuchard/air-plugin/blob/main/TERMS.md"
+  },
+  "license": "Apache-2.0"
+}

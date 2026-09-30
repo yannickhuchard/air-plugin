@@ -1,0 +1,28 @@
+{
+  "name": "AIR — Architecture Workspace",
+  "version": "0.1.5",
+  "developer": "Yannick Huchard",
+  "category": "Productivity",
+  "short_description": "Design and review architecture dossiers with your AIR installation.",
+  "long_description": "Official AIR workflow skills by Yannick Huchard, using the separately installed local AIR CLI. Requires Python 3.11+, local command execution, a selected AIR project/home and its authenticated loopback HTTP service. No MCP server or shared hosted backend is included or required by this variant. Installing the plugin does not install the engine. Public-directory eligibility and supported execution surfaces remain under product-specific review.",
+  "website": "https://github.com/yannickhuchard/air-plugin",
+  "support_url": "https://github.com/yannickhuchard/air-plugin/issues",
+  "privacy_url": "https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md",
+  "terms_url": "https://github.com/yannickhuchard/air-plugin/blob/main/TERMS.md",
+  "logo": "variants/air-local-cli/assets/logo.png",
+  "starter_prompts": [
+    "Connect an authorized AIR installation to this project.",
+    "Review this architecture dossier using the configured AIR registry.",
+    "Prepare architecture handoff materials from this AIR baseline."
+  ],
+  "countries": "PUBLISHER_SELECTION_REQUIRED",
+  "verified_developer_identity": "VERIFIED_IN_PORTAL_2026_09_30",
+  "portal_draft_status": "CREATED",
+  "submission_status": "NOT_SUBMITTED",
+  "eligibility": "LOCAL_EXECUTION_REVIEW_REQUIRED",
+  "engine_reviewer_access": "SYNTHETIC_LOCAL_CLI_REVIEW_PREPARATION",
+  "release_notes": "Skills-only CLI review candidate. Explicit local engine dependency, actionable prerequisite diagnostics and synthetic reviewer recipe. Not submitted or approved; preserve existing draft.",
+  "support_case": "16084977",
+  "package_variant": "skills-only-local-cli",
+  "automated_skill_scans": "NOT_RUN_FOR_0_1_5"
+}

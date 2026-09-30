@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "air-local",
+  "version": "0.1.5",
+  "description": "AIR — Architecture Workspace : conception, vérification et simulation via la CLI du moteur AIR local installé séparément.",
+  "author": {
+    "name": "Yannick Huchard",
+    "url": "https://github.com/yannickhuchard"
+  },
+  "homepage": "https://github.com/yannickhuchard/air-plugin",
+  "repository": "https://github.com/yannickhuchard/air-plugin",
+  "keywords": [
+    "architecture",
+    "air",
+    "local",
+    "sqlite",
+    "cli"
+  ],
+  "license": "Apache-2.0"
+}

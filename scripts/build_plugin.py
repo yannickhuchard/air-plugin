@@ -20,16 +20,19 @@ BINARY_FILES = ('assets/logo.png',)
 FILES = TEXT_FILES + BINARY_FILES
 
 
-def build(source: Path, output: Path) -> dict:
+def build(source: Path, output: Path, variant: str = 'mcp') -> dict:
     source = source.resolve()
+    if variant not in ('mcp', 'cli'):
+        raise ValueError('Unknown variant')
+    files = FILES + (('skills/air-local-design/scripts/air_cli.py',) if variant == 'cli' else ())
     payloads = {}
-    for name in FILES:
+    for name in files:
         path = source / name
         if path.is_symlink() or not path.resolve().is_relative_to(source):
             raise ValueError('Plugin source must not contain redirected files')
         # Only text is normalized: PNG bytes must survive packaging unchanged.
         payloads[name] = (path.read_text(encoding='utf-8').replace('\r\n', '\n').encode('utf-8')
-                          if name in TEXT_FILES else path.read_bytes())
+                          if name not in BINARY_FILES else path.read_bytes())
         if name in BINARY_FILES and (not payloads[name].startswith(b'\x89PNG\r\n\x1a\n')
                                     or len(payloads[name]) > 5 * 1024 * 1024):
             raise ValueError('Plugin branding requires a PNG up to 5 MiB')
@@ -48,13 +51,15 @@ def build(source: Path, output: Path) -> dict:
         if compat['interface'].get(field) != './assets/logo.png':
             raise ValueError('Plugin branding must reference its packaged logo')
     # This distribution is deliberately project-bound, not a global MCP connection.
-    if any(k in compat for k in ('mcpServers', 'apps')):
+    if any(k in manifest for manifest in (compat, portable) for k in ('mcpServers', 'apps')):
         raise ValueError('AIR Local must use the project connection')
+    if variant == 'cli' and any(p.name in ('mcp.json', '.mcp.json') for p in source.rglob('*')):
+        raise ValueError('CLI variant cannot contain MCP configuration')
     output = output.resolve()
     if output == source or output.is_relative_to(source):
         raise ValueError('Write artifacts outside the plugin source')
     output.mkdir(parents=True, exist_ok=True)
-    archive = output / f"air-local-{portable['version']}.zip"
+    archive = output / f"air-local-{portable['version']}{'-cli' if variant == 'cli' else ''}.zip"
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_STORED) as bundle:
         for name, content in sorted(payloads.items()):
             info = zipfile.ZipInfo('air-local/' + name, (2020, 1, 1, 0, 0, 0))
@@ -74,8 +79,10 @@ def build(source: Path, output: Path) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'dist' / 'plugin')
+    parser.add_argument('--variant', choices=('mcp', 'cli'), default='mcp')
     args = parser.parse_args()
-    print(json.dumps(build(ROOT / 'plugins' / 'air-local', args.output_dir), ensure_ascii=False, indent=2))
+    source = ROOT / ('variants/air-local-cli' if args.variant == 'cli' else 'plugins/air-local')
+    print(json.dumps(build(source, args.output_dir, args.variant), ensure_ascii=False, indent=2))
 
 
 if __name__ == '__main__':

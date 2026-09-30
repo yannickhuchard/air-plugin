@@ -1,0 +1,21 @@
+{
+  "schema": "air.plugin-package/1",
+  "name": "air-local",
+  "version": "0.1.5",
+  "developer": "Yannick Huchard",
+  "license": "Apache-2.0",
+  "archive": "air-local-0.1.5-cli.zip",
+  "sha256": "05bd57aa95d991bb77c10203471699e045674bd01d313569321aa6050ce33ad2",
+  "files": {
+    ".codex-plugin/plugin.json": "31ef0f1e0d47236b32b400b9445f21768d9552dc69232076295affc2f8a999d4",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "57e825639d18b3c0f53323c094155c8570fdadabffe9051ee81499a037a7cd57",
+    "README.md": "6f64e8031e28044fa4b39182db6975c2650a5516f8b2cfdad7f349b546501180",
+    "assets/logo.png": "42a20358349b003584845144231611a6a7ee613a1d58b5ac9aa99459389f387f",
+    "plugin.json": "1fe1f00def1223448e482bcfc3c8b98cddb9251cb9ad0a00eb4525d6356dc4fd",
+    "skills/air-local-design/SKILL.md": "a53e75e75fa18360867f79db47f5408371848a6b1b398104bc2d345c1b6fdeb9",
+    "skills/air-local-design/scripts/air_cli.py": "6bf6ee835afc40c623506794887ff4eba5d12a6636685ed08a016a6ed31287a2",
+    "skills/air-local-setup/SKILL.md": "851aa75b6b7880810ba4c14eec4971f23967247928fca8618d3a062ac8df9747",
+    "skills/air-local-setup/references/connection.md": "81a57327928a93e09d72b0a32eaa9b86f3b103668465da2ec3e7f51995259a9b"
+  }
+}

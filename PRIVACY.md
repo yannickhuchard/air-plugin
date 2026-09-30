@@ -1,10 +1,16 @@
 # AIR plugin — privacy and data handling
 
-Publisher: **Yannick Huchard**. Package: **AIR — Architecture Workspace** (`air-local`). Updated 28 September 2026.
+Publisher: **Yannick Huchard**. Package: **AIR — Architecture Workspace** (`air-local`). Updated 30 September 2026.
 
 ## Package behavior
 
 This public package consists of instructions, references, metadata and a logo. It includes no telemetry collector, analytics SDK, tracking pixel, hosted account service or shared MCP endpoint operated by the publisher. Installing this package does not itself send architecture dossiers to the publisher.
+
+The separate 0.1.5 CLI review candidate also includes a Python helper. It starts
+the separately installed AIR CLI as a subprocess against an explicitly selected
+local home and loopback HTTP port. It does not read credential contents, collect
+telemetry or contact a publisher service. The AIR engine consumes its own protected
+credential files. Local CLI results can still enter the agent's conversation.
 
 An agent following the setup skill may read authorized project documentation, configure a local AIR installation and connect the user's chosen MCP service. An agent following the design skill may read and modify architecture dossiers through that service within the user's permissions. The package does not grant access by itself.
 

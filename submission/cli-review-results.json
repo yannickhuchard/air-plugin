@@ -1,0 +1,232 @@
+{
+  "schema": "air.cli-review/1",
+  "engine_version": "0.34.0rc9",
+  "plugin_version": "0.1.5",
+  "status": "PASS_SCOPED",
+  "cases": [
+    {
+      "id": "CLI-P1",
+      "expected": "Authenticated local identity and engine capabilities",
+      "observed": {
+        "identity": {
+          "identity": "urn:air:identity:08053e6aefc31eea79ad0916ff8a4162fab0b5aa375ac27cff85eb1211e87ca3",
+          "subject": "local-admin",
+          "role": "admin",
+          "actions": [
+            "read",
+            "write",
+            "operate"
+          ],
+          "identity_binding": "CONNECTION_CREDENTIAL",
+          "client_supplied_identity_accepted": false,
+          "authority": "AUTHENTICATED_IDENTITY_ONLY",
+          "business_mandate_granted": false
+        },
+        "capabilities_available": true
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-P2",
+      "expected": "Three actual Asteria outcomes, blocked gates and nine unexecuted business tests",
+      "observed": [
+        {
+          "dossier": "D01",
+          "result": "UNKNOWN",
+          "gate": "BLOCKED",
+          "business_tests_not_executed": 3
+        },
+        {
+          "dossier": "D02",
+          "result": "VIOLATED",
+          "gate": "BLOCKED",
+          "business_tests_not_executed": 3
+        },
+        {
+          "dossier": "D03",
+          "result": "CONFLICTING",
+          "gate": "BLOCKED",
+          "business_tests_not_executed": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-P3",
+      "expected": "Valid change proposal; original baseline unchanged",
+      "observed": {
+        "candidate_valid": true,
+        "original_digest": "sha256:a8d2637d5189e4e480bb4d9f1bbf444c4ae71b1f271ff378e07fa9832a3ac7da"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-P4",
+      "expected": "Repeatable declared-model simulation, not a production measurement",
+      "observed": {
+        "engine": "air.scenario-simulation/0.32",
+        "regime": "MODEL_BASED_SIMULATION",
+        "baseline": {
+          "id": "urn:asteria:cli-review:simulation-baseline",
+          "revision": 1,
+          "digest": "sha256:f3d92767fa4ad2e57ad63eb55d9feb75fbae3c86c28449bdaf2dae4f41260e29"
+        },
+        "scenario": {
+          "id": "urn:asteria:cli-review:scenario",
+          "revision": 1,
+          "digest": "sha256:d435f06cd57bf6bb114607b68c6c83070234ccbc28cd818dd54ee19228866b30"
+        },
+        "workflow": {
+          "id": "urn:asteria:cli-review:flow",
+          "revision": 1,
+          "digest": "sha256:c37cea1677b9d4dc56a2d4f66d64e99fbff0c2d7a316d5c8f5b068db57dde504"
+        },
+        "performance_model": {
+          "id": "urn:asteria:cli-review:model",
+          "revision": 1,
+          "digest": "sha256:b9247f285984b52f59e5a0c8c8ea6204dd5ec194663610fb05d1170763375b13"
+        },
+        "runs": 100,
+        "seed": 7,
+        "measure": {
+          "from_step": "start",
+          "to_step": "finish"
+        },
+        "target": {
+          "max_ms": 500,
+          "percentile": 95
+        },
+        "latency_ms": {
+          "measured_runs": 100,
+          "p50": 200.0,
+          "p90": 200.0,
+          "p95": 200.0,
+          "p99": 200.0,
+          "max": 200.0,
+          "mean": 200.0
+        },
+        "observed_at_target_percentile": 200.0,
+        "verdict": "PASS",
+        "conditional_verdict": "PASS",
+        "inconclusive_reasons": [],
+        "population": {
+          "requested_runs": 100,
+          "measured_runs": 100,
+          "excluded_runs": 0,
+          "scope": "RUNS_REACHING_BOTH_ENDPOINTS"
+        },
+        "classes": [
+          {
+            "name": "all",
+            "weight": 100,
+            "runs": 100,
+            "measure_not_reached": 0,
+            "paths": {
+              "start > finish": 100
+            }
+          }
+        ],
+        "model_qualification": "DECLARED",
+        "proof_level": "DECLARED_MODEL_SIMULATION",
+        "calibrated_steps": [],
+        "calibration": {
+          "finish": {
+            "observations": [],
+            "calibrated": false
+          },
+          "start": {
+            "observations": [],
+            "calibrated": false
+          }
+        },
+        "calibration_tolerance": 0.2,
+        "unmodelled_steps": [],
+        "unguarded_flows": [
+          "f1"
+        ],
+        "undecided_guards": [],
+        "verification_case": {
+          "id": "urn:asteria:cli-review:latency-case",
+          "revision": 1
+        },
+        "limits": [
+          "Model-based: the result is what the declared workflow, guards and duration model imply, not a measurement of a running system",
+          "Guards are evaluated on the declared class contexts; an unguarded flow is always taken and reported",
+          "A class without start_step enters every start step at once; name the start step of alternative triggers",
+          "A step reached by several paths starts at its earliest arrival (OR-join); parallel branches are not synchronised",
+          "A step is numerically calibrated only when every cited duration statistic agrees within 20 %; this does not authenticate the observations or establish their freshness or representativeness",
+          "Latency percentiles describe only runs reaching both measurement endpoints; a known excluded path is outside that measured population",
+          "An undecidable guard or a missing step duration makes the overall verdict inconclusive; the conditional verdict remains available for diagnosis"
+        ],
+        "external_effects": false,
+        "authorization_granted": false,
+        "report_digest": "sha256:c2813ea0cca9a38c480e94783e5ea6c5b7211cd08bd784cbf6b6edabe81e2128"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-P5",
+      "expected": "Actual generated handoff files with pinned baselines",
+      "observed": {
+        "files_written": 40,
+        "baselines": [
+          {
+            "id": "urn:asteria:construction-baseline:sav",
+            "revision": 1,
+            "digest": "sha256:a8d2637d5189e4e480bb4d9f1bbf444c4ae71b1f271ff378e07fa9832a3ac7da"
+          },
+          {
+            "id": "urn:asteria:construction-baseline:atelier",
+            "revision": 1,
+            "digest": "sha256:d6fda88c294d93da657bb24b73c8189ed23003c6f89b903b174c9a6a61e997e6"
+          },
+          {
+            "id": "urn:asteria:construction-baseline:identites",
+            "revision": 1,
+            "digest": "sha256:1519e8fd3025726e745fbbf69e83181cd62f2a3f6f220829bc3c30c96bc099c2"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-N1",
+      "expected": "Actionable missing-engine error, no invented check",
+      "observed": {
+        "error": "AIR_ENGINE_MISSING",
+        "hint": "Select the authorized AIR Engine checkout; follow its scripts/install.py and installation guide with Python 3.11+. The plugin does not install the engine."
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-N2",
+      "expected": "Actionable missing-configuration error",
+      "observed": {
+        "error": "AIR_CONFIGURATION_MISSING",
+        "hint": "Configure this explicit AIR home using the engine installation guide. Do not print or paste credentials."
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-N3",
+      "expected": "Reader write refused by AIR authentication/authorization",
+      "observed": {
+        "error": "AIR_HTTP",
+        "status": 403,
+        "response": {
+          "detail": {
+            "code": "AIR_FORBIDDEN"
+          }
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "scope": "Technical CLI integration on one Windows workstation; synthetic data only",
+  "openai_directory": "NOT_SUBMITTED",
+  "native_skill_behavior": "NOT_INDEPENDENTLY_TESTED",
+  "reviewer_recording": "NOT_RECORDED",
+  "business_applications_executed": false,
+  "ci_executed": false,
+  "transcript_sha256": "4a4ab059239e10f62e9c19ed96e47b8008e5d8094b4cdd03dd6e14f9c5b7e4c8"
+}

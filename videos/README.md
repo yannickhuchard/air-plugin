@@ -3,6 +3,16 @@
 Deux vidéos en français, avec voix de synthèse locale, sous-titres incrustés et
 fichiers SRT/VTT séparés. Développeur officiel : **Yannick Huchard**.
 
+Publication YouTube publique confirmée le 30 septembre 2026 :
+
+- [Playlist AIR — Architecture de solutions avec les outils agentiques](https://www.youtube.com/playlist?list=PLc6Fk84UAiYc)
+- [Présentation AIR](https://youtu.be/NV3DxBdulro)
+- [Trois dossiers Asteria, du besoin aux preuves](https://youtu.be/6V9c3qvojU8)
+
+Les descriptions incluent les liens des dépôts et du white paper
+[Enterprise Morphogenesis](https://yannickhuchard.github.io/enterprise-morphogenesis/).
+Les intégrations futures et la revue OpenAI y sont distinguées des fonctions reçues.
+
 | Vidéo | Durée de composition | Contenu |
 | --- | --- | --- |
 | `air-presentation-fr` | 2 min 01 s | Valeur d’AIR, chaîne de conception, trois alertes Asteria, installation autonome et distribution |

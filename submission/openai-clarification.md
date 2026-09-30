@@ -1,5 +1,21 @@
 # AIR local deployment — publication route clarification
 
+## Specialist reply received — 30 September 2026
+
+Paul (OpenAI Support), case **#16084977**, confirmed that Skills-only submissions
+exist and that core local execution requires product-specific review rather than
+being categorically prohibited. He recommends preparing a local AIR CLI variant
+without MCP declarations, with the separately installed engine disclosed and
+actionable missing-installation/configuration errors. The reviewer package should
+use public synthetic data, installation instructions, five positive and three
+negative reproducible cases and a short complete workflow demonstration.
+
+Preserve the existing draft; the legacy MCP-to-Skills-only migration remains an
+open review question. Do not create a duplicate or expose the developer workstation.
+No eligibility, runtime surface, local MCP support or directory approval was granted.
+No further information was required at the time of the reply. Preparation is in
+[cli-review.md](cli-review.md). The original request and dispatch history follow.
+
 Status: SENT through authenticated help.openai.com support on 2026-09-30,
 on behalf of Yannick Huchard, official AIR developer. Human escalation confirmed.
 This public record summarizes the request without private portal identifiers.

@@ -2,6 +2,11 @@
 
 This directory contains preparation material, **not evidence of submission or approval**.
 
+Latest: specialist Paul replied in case **#16084977**. Prepare the
+[Skills-only/local CLI candidate and reviewer recipe](cli-review.md), preserving
+the existing draft. Eligibility, supported surfaces and draft conversion are still
+subject to product-specific review. Earlier pending-response notes below are historical.
+
 Update on 2026-09-30: developer identity is **Verified** and an AIR — Architecture
 Workspace 0.1.4 draft was created. The listing, official verified identity,
 Productivity category, public links and icons are saved. It is **not submitted**.
