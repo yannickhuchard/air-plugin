@@ -1,0 +1,16 @@
+**/.hyperframes/
+**/.media/
+**/node_modules/
+**/renders/
+**/snapshots/
+**/*.wav
+**/*.mp4
+**/*.sha256
+**/assets/gsap.min.js
+**/voice-test.*
+**/*.log
+**/media-adoption.json
+**/contact-sheet.png
+**/verification-frames/
+**/.thumbnails/
+**/.waveform-cache/

@@ -1,0 +1,87 @@
+{
+  "logo": "AIR official plugin 0.1.4; Yannick Huchard; Apache-2.0",
+  "screenshots": "Browser captures of unmodified generated synthetic Asteria rc9 HTML on 2026-09-30",
+  "narration": "Local Kokoro ff_siwis; synthetic voice; no voice cloning",
+  "assets": [
+    {
+      "path": "assets/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "42a20358349b003584845144231611a6a7ee613a1d58b5ac9aa99459389f387f"
+    },
+    {
+      "path": "assets/p01-00.sha256",
+      "sha256": "30470440b2367d43a5691e3091bd210d7b6659dcb9634e4f6bfef14fbd68c955"
+    },
+    {
+      "path": "assets/p01-00.txt",
+      "sha256": "f5787f18523a42b92e29cfdfc0b05ce868dfc5a1dc13d793f56e1fc545eb09b9"
+    },
+    {
+      "path": "assets/p01-00.wav",
+      "sha256": "b69c5ac16eeca44ba389e8f99fb36d7b35d27f6ceaebb05f9896f7bad89ebb8a"
+    },
+    {
+      "path": "assets/p02-00.sha256",
+      "sha256": "504406aa53ca3e251447314858a6105c66a11fea0d6ea4660c850dd4e6f3a0e9"
+    },
+    {
+      "path": "assets/p02-00.txt",
+      "sha256": "8070594aa1b7e6d9d1a6f3849f8350d077d38de55026ba8ca30f8fa9f5e9f2a5"
+    },
+    {
+      "path": "assets/p02-00.wav",
+      "sha256": "5a79b6cda1b018558eacc75ea5b47abd56bb401997403050b63fad79d3623cb1"
+    },
+    {
+      "path": "assets/p03-00.sha256",
+      "sha256": "9ae3a831f5c4c9e37241d42e4afc067684b299c75c1b6410d13882fa213b69b5"
+    },
+    {
+      "path": "assets/p03-00.txt",
+      "sha256": "219bfc6b859c47edcf31b3ee3ff14d2ff45a48187a99e540814c3603f5358dbe"
+    },
+    {
+      "path": "assets/p03-00.wav",
+      "sha256": "5f0b807c8dedcbcfb9e3cbbd03f9ca53ad232751ddf877afca9c45b6f7eec063"
+    },
+    {
+      "path": "assets/p04-00.sha256",
+      "sha256": "2f66b14c019bf6baa901b148969e5d304f3eed83d20145e1c21f9f86072ef35a"
+    },
+    {
+      "path": "assets/p04-00.txt",
+      "sha256": "4b7e8a70fdff1bce98ab26209e9403f07790e8826852dc931cd96e18324c078f"
+    },
+    {
+      "path": "assets/p04-00.wav",
+      "sha256": "45e5b04a91833558fe74c6985b3e5f5bed22a400d183dac3a992bbd6a67070c8"
+    },
+    {
+      "path": "assets/p05-00.sha256",
+      "sha256": "fead5a459d46dba9c72612228ae530c242386b96f8fcc1567a6c0979d004dde4"
+    },
+    {
+      "path": "assets/p05-00.txt",
+      "sha256": "088e082308a25a3cab72ac56e50bfb1f022c86174d8d89dad4860c75f6ef7673"
+    },
+    {
+      "path": "assets/p05-00.wav",
+      "sha256": "5a045ef2e5092f64eef48a1ab6cf74ba186e9bc2bb11673db28a8eb3fb881e06"
+    },
+    {
+      "path": "assets/p06-00.sha256",
+      "sha256": "cac91f13a9e6a4d72c9196815cc93d3f3aead621a2ff440f26b7bdd76dccdc81"
+    },
+    {
+      "path": "assets/p06-00.txt",
+      "sha256": "fc60cd7396d03b629721c032e22316ae95cbaa81cc421722feed695dee4443ba"
+    },
+    {
+      "path": "assets/p06-00.wav",
+      "sha256": "294602402389d816b041f7a77aa3fa7eca78fd0a6ddd76f03e75bf78423a080d"
+    }
+  ]
+}

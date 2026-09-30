@@ -1,0 +1,1 @@
+Les trois vues possèdent une section registre et sources. Les objets y sont rattachés à leurs révisions, et chaque vue identifie sa baseline par une empreinte. Une correction passe par une nouvelle révision et une proposition. Cela permet de conserver le contexte exact utilisé pour produire le dossier, plutôt que de modifier silencieusement son histoire.

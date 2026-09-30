@@ -1,0 +1,48 @@
+{
+  "duration": 121.246,
+  "chapters": [
+    {
+      "id": "p01",
+      "title": "Des plans que l’on peut vérifier.",
+      "start": 0,
+      "duration": 17.783,
+      "midpoint": 8.892
+    },
+    {
+      "id": "p02",
+      "title": "Du besoin au travail prévu",
+      "start": 17.783,
+      "duration": 19.66,
+      "midpoint": 27.613
+    },
+    {
+      "id": "p03",
+      "title": "Trois dossiers. Trois alertes utiles.",
+      "start": 37.443,
+      "duration": 22.284,
+      "midpoint": 48.585
+    },
+    {
+      "id": "p04",
+      "title": "Sur le poste de l’architecte",
+      "start": 59.727,
+      "duration": 20.577,
+      "midpoint": 70.016
+    },
+    {
+      "id": "p05",
+      "title": "L’agent accompagne. Les preuves décident.",
+      "start": 80.304,
+      "duration": 21.239,
+      "midpoint": 90.924
+    },
+    {
+      "id": "p06",
+      "title": "Explorez les trois dossiers.",
+      "start": 101.543,
+      "duration": 19.703,
+      "midpoint": 111.395
+    }
+  ],
+  "caption_timing": "Measured paragraph durations; proportional phrase timing, not word-level ASR"
+}

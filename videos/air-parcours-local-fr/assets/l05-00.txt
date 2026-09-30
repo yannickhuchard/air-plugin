@@ -1,0 +1,1 @@
+Le troisième dossier concerne les identités. L’exigence demande une révocation traçable, tout en séparant proposition, approbation et exécution. La fonction prépare une proposition. La vue ne fournit aucune autorisation de supprimer un accès dans un système réel.

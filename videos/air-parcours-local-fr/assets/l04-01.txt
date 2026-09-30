@@ -1,0 +1,1 @@
+La réception future distingue une mesure nominale, une mesure périmée, puis un collecteur expiré ou une unité incompatible. Les résultats attendus précisent le comportement à développer. Là encore, les trois scénarios restent non exécutés. L’architecte transmet ainsi des critères concrets, sans prétendre que l’application a déjà été construite.

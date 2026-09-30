@@ -1,0 +1,55 @@
+{
+  "schema": "air.public-reception/1",
+  "status": "PASS_SCOPED",
+  "date": "2026-09-29T22:49:36.400976+00:00",
+  "version": "0.34.0rc9",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "artifacts": {
+    "release-set.json": "5bb8a9f1ff8afc4f6269fc1ab67fe3ae4d3bd1c28de076dc55250082e17a3c63",
+    "air-0.34.0rc9-source.zip": "5fb7dfbb3dc5b10c021440c038c44155da6ad7c93f03dcd93f4fdfd731f34d03",
+    "air_engine-0.34.0rc9-py3-none-any.whl": "37f423799d0f019d6167efc1f386a72cec284a294c88539376e9571f59fa1ab0",
+    "constraints.cdx.json": "fc7e7a4ce22b21d9e73477466bb8a575da4779fcaa29b7d8051883d14edae735"
+  },
+  "installation": {
+    "fresh_environment": true,
+    "installed_from_wheel": true,
+    "offline_installation": true,
+    "reinstallation_preserves_identity_and_revision": true,
+    "recovery_preserves_digest_and_revokes_old_identity": true,
+    "server_stopped": true
+  },
+  "dossiers": [
+    {
+      "dossier": "D01",
+      "computed_results": [
+        "UNKNOWN"
+      ],
+      "gate": "BLOCKED",
+      "business_tests_not_executed": 3
+    },
+    {
+      "dossier": "D02",
+      "computed_results": [
+        "VIOLATED"
+      ],
+      "gate": "BLOCKED",
+      "business_tests_not_executed": 3
+    },
+    {
+      "dossier": "D03",
+      "computed_results": [
+        "CONFLICTING"
+      ],
+      "gate": "BLOCKED",
+      "business_tests_not_executed": 3
+    }
+  ],
+  "http_executed": true,
+  "mcp_executed": true,
+  "second_physical_device": "NOT_ATTESTED",
+  "native_agent_acceptance": "NOT_EXECUTED",
+  "public_chatgpt_acceptance": "NOT_EXECUTED",
+  "full_air_conformance": false,
+  "ci_executed": false
+}

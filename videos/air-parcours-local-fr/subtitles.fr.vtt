@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:07.355
+Un dossier d’architecture peut être bien présenté tout en laissant des décisions importantes sans preuve.
+
+00:00:07.355 --> 00:00:13.710
+Ce parcours montre comment AIR rend ces limites visibles, pour que les équipes sachent quoi construire et
+
+00:00:13.710 --> 00:00:20.006
+quoi vérifier ensuite. Nous utilisons trois dossiers entièrement fictifs de la même entreprise : Asteria
+
+00:00:20.006 --> 00:00:20.605
+Industrie.
+
+00:00:21.205 --> 00:00:28.230
+Le premier concerne le service après-vente. Le deuxième prépare la maintenance connectée d’un atelier. Le
+
+00:00:28.230 --> 00:00:35.056
+troisième organise les arrivées, les mobilités et les départs. Ils partagent un contexte d’entreprise,
+
+00:00:35.056 --> 00:00:38.635
+une plateforme d’identité et une équipe d’intégration.
+
+00:00:39.235 --> 00:00:45.572
+Cette vidéo est un montage commenté de captures des vues réellement générées par le moteur public zéro
+
+00:00:45.572 --> 00:00:52.032
+point trente-quatre, candidate neuf. Elle ne montre ni une session ChatGPT en direct, ni l’exécution des
+
+00:00:52.032 --> 00:00:58.000
+applications métier futures. Les commentaires expliquent les résultats conservés dans le reçu de
+
+00:00:58.000 --> 00:00:58.861
+démonstration.
+
+00:01:01.561 --> 00:01:08.121
+La première cible de déploiement est le poste de chaque architecte. Python suffit à l’installation
+
+00:01:08.121 --> 00:01:14.880
+documentée, avec SQLite et une identité locale par défaut. Docker, un service cloud et un fournisseur
+
+00:01:14.880 --> 00:01:21.506
+d’identité externe ne sont pas obligatoires. Les options PostgreSQL et OIDC répondent à des besoins
+
+00:01:21.506 --> 00:01:22.169
+distincts.
+
+00:01:22.769 --> 00:01:29.028
+Le kit de réception public télécharge les artefacts de la candidate et vérifie leurs empreintes. Le reçu
+
+00:01:29.028 --> 00:01:34.989
+de la répétition confirme une installation neuve depuis le paquet, une installation hors ligne, une
+
+00:01:34.989 --> 00:01:41.308
+réinstallation qui préserve l’identité et la révision, puis une restauration qui conserve l’empreinte des
+
+00:01:41.308 --> 00:01:43.633
+données et révoque l’ancienne identité.
+
+00:01:44.233 --> 00:01:50.316
+Ces résultats proviennent d’un environnement séparé sur le même poste Windows, avec Python trois point
+
+00:01:50.316 --> 00:01:56.280
+douze. Ils ne prouvent pas une réception sur une seconde machine physique. Le reçu conserve aussi la
+
+00:01:56.280 --> 00:02:02.304
+mention non exécuté pour la recette d’un client agent natif et pour le parcours public ChatGPT. C’est
+
+00:02:02.304 --> 00:02:05.374
+cette limite précise qui accompagne la distribution.
+
+00:02:08.074 --> 00:02:14.331
+Ouvrons le dossier du service après-vente. L’exigence demande d’enregistrer une déclaration durable,
+
+00:02:14.331 --> 00:02:20.711
+distincte de toute décision de garantie. La vue relie cette exigence à la fonction Submit Claim, à son
+
+00:02:20.711 --> 00:02:27.154
+contrat, puis au travail de construction et de vérification. La chaîne permet de discuter le même objet
+
+00:02:27.154 --> 00:02:29.322
+avec les métiers et les ingénieurs.
+
+00:02:29.922 --> 00:02:36.083
+Le tableau suivant décrit trois scénarios à exécuter lors de la réalisation : traiter un dépôt et son
+
+00:02:36.083 --> 00:02:42.486
+doublon, refuser une demande concernant un autre client, puis gérer une indisponibilité sans fabriquer de
+
+00:02:42.486 --> 00:02:48.828
+faux reçu. La colonne d’exécution indique non exécuté. Un résultat attendu ne devient pas un test réussi
+
+00:02:48.828 --> 00:02:50.338
+parce qu’il a été rédigé.
+
+00:02:50.938 --> 00:02:56.996
+L’inconnue visible porte sur la fiabilité de la clé de déduplication fournie par l’ERP. Dans le reçu
+
+00:02:56.996 --> 00:03:02.933
+calculé, le résultat est UNKNOWN et la porte est bloquée. La suite proposée consiste à obtenir une
+
+00:03:02.933 --> 00:03:09.291
+confirmation sourcée de l’équipe ERP, puis à réviser et vérifier le dossier. Nous ne remplaçons pas cette
+
+00:03:09.291 --> 00:03:11.930
+confirmation par une supposition de l’agent.
+
+00:03:14.630 --> 00:03:21.297
+Le dossier atelier demande de proposer une inspection humaine à partir de mesures fraîches, sans commande
+
+00:03:21.297 --> 00:03:27.775
+physique automatique. La fonction et le contrat portent cette séparation. Le travail prévu concerne la
+
+00:03:27.775 --> 00:03:34.379
+construction et la vérification du service de proposition. Aucune machine réelle n’est pilotée par cette
+
+00:03:34.379 --> 00:03:35.259
+démonstration.
+
+00:03:35.859 --> 00:03:42.278
+La réception future distingue une mesure nominale, une mesure périmée, puis un collecteur expiré ou une
+
+00:03:42.278 --> 00:03:48.697
+unité incompatible. Les résultats attendus précisent le comportement à développer. Là encore, les trois
+
+00:03:48.697 --> 00:03:54.992
+scénarios restent non exécutés. L’architecte transmet ainsi des critères concrets, sans prétendre que
+
+00:03:54.992 --> 00:03:57.214
+l’application a déjà été construite.
+
+00:03:57.814 --> 00:04:03.587
+Le contrôle de la démonstration donne VIOLATED pour l’observation périmée et garde la porte bloquée. Ce
+
+00:04:03.587 --> 00:04:08.860
+statut calculé ne doit pas être confondu avec le résultat inconnu prévu pour un futur scénario
+
+00:04:08.860 --> 00:04:14.521
+applicatif. La question ouverte demande quel seuil de fraîcheur rend une observation inutilisable. La
+
+00:04:14.521 --> 00:04:20.405
+suite proposée est de faire approuver ce seuil et de fournir une observation valide, puis de relancer les
+
+00:04:20.405 --> 00:04:21.793
+vérifications concernées.
+
+00:04:24.493 --> 00:04:31.879
+Le troisième dossier concerne les identités. L’exigence demande une révocation traçable, tout en séparant
+
+00:04:31.879 --> 00:04:38.916
+proposition, approbation et exécution. La fonction prépare une proposition. La vue ne fournit aucune
+
+00:04:38.916 --> 00:04:42.818
+autorisation de supprimer un accès dans un système réel.
+
+00:04:43.418 --> 00:04:49.590
+Les scénarios prévus couvrent un départ nominal, des dates contradictoires et un compte non rapproché.
+
+00:04:49.590 --> 00:04:55.522
+Une contradiction doit conduire à un blocage et à la désignation du responsable de résolution. Une
+
+00:04:55.522 --> 00:05:01.634
+inconnue doit rester visible, sans action automatique sur un autre compte. Ces comportements sont des
+
+00:05:01.634 --> 00:05:03.792
+critères pour la phase d’ingénierie.
+
+00:05:04.392 --> 00:05:10.040
+Le reçu calculé conserve CONFLICTING et la porte bloquée. Dans la vue, une question demande également qui
+
+00:05:10.040 --> 00:05:15.475
+confirme la date de fin d’un prestataire dont l’échéance est absente. Ces réserves sont distinctes et
+
+00:05:15.475 --> 00:05:20.644
+doivent être traitées avec leurs sources. La suite proposée est un arbitrage documenté entre les
+
+00:05:20.644 --> 00:05:26.026
+responsables concernés, puis une nouvelle révision. Choisir arbitrairement la source la plus commode
+
+00:05:26.026 --> 00:05:28.370
+masquerait le risque au lieu de le résoudre.
+
+00:05:31.070 --> 00:05:37.255
+Les trois vues possèdent une section registre et sources. Les objets y sont rattachés à leurs révisions,
+
+00:05:37.255 --> 00:05:43.440
+et chaque vue identifie sa baseline par une empreinte. Une correction passe par une nouvelle révision et
+
+00:05:43.440 --> 00:05:49.626
+une proposition. Cela permet de conserver le contexte exact utilisé pour produire le dossier, plutôt que
+
+00:05:49.626 --> 00:05:52.041
+de modifier silencieusement son histoire.
+
+00:05:52.641 --> 00:05:58.202
+Le livrable destiné aux ingénieurs, aux chefs de projet et aux équipes d’exploitation doit inclure les
+
+00:05:58.202 --> 00:06:03.709
+exigences, les contrats, le travail prévu, les scénarios de réception et les questions ouvertes. Dans
+
+00:06:03.709 --> 00:06:09.001
+cette démonstration, neuf tests des futurs systèmes métier restent non exécutés. Les trois portes
+
+00:06:09.001 --> 00:06:14.238
+bloquées sont des résultats utiles : elles indiquent les éléments à résoudre avant d’accorder la
+
+00:06:14.238 --> 00:06:15.318
+réception concernée.
+
+00:06:15.918 --> 00:06:21.427
+Le moteur et les exemples sont disponibles dans le dépôt public AIR Engine. Le plugin Architecture
+
+00:06:21.427 --> 00:06:27.325
+Workspace fournit les skills d’accompagnement, avec un moteur installé séparément et une connexion propre
+
+00:06:27.325 --> 00:06:33.001
+au projet. La publication dans l’annuaire OpenAI attend une réponse sur cette topologie locale. Cette
+
+00:06:33.001 --> 00:06:38.622
+vidéo documente le parcours local ; la recette publique ChatGPT et la vidéo correspondante restent à
+
+00:06:38.622 --> 00:06:41.070
+effectuer lorsque cette voie sera confirmée.

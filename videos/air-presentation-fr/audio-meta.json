@@ -1,0 +1,55 @@
+{
+  "provider": "local Kokoro",
+  "voice": "ff_siwis",
+  "speed": 0.85,
+  "paragraphs": [
+    {
+      "scene": "p01",
+      "paragraph": 0,
+      "text": "Concevoir une transformation exige de savoir ce qui est établi, ce qui manque, et ce qui se contredit. AIR organise ces informations pour préparer des plans d’architecture vérifiables, avant leur réalisation par les équipes.",
+      "path": "assets/p01-00.wav",
+      "duration": 15.082667,
+      "script_sha256": "f5787f18523a42b92e29cfdfc0b05ce868dfc5a1dc13d793f56e1fc545eb09b9"
+    },
+    {
+      "scene": "p02",
+      "paragraph": 0,
+      "text": "Une exigence est reliée à une fonction, à son contrat et au travail prévu. L’architecte peut retrouver les sources et les révisions utilisées. Les inconnues restent visibles dans le dossier transmis aux ingénieurs, aux chefs de projet et aux équipes d’exploitation.",
+      "path": "assets/p02-00.wav",
+      "duration": 16.96,
+      "script_sha256": "8070594aa1b7e6d9d1a6f3849f8350d077d38de55026ba8ca30f8fa9f5e9f2a5"
+    },
+    {
+      "scene": "p03",
+      "paragraph": 0,
+      "text": "Dans l’entreprise fictive Asteria, le service après-vente manque d’une confirmation de l’ERP. L’atelier dispose d’une observation périmée. Le dossier des identités contient des sources contradictoires. AIR conserve respectivement les résultats inconnu, violé et contradictoire. Les trois portes restent bloquées.",
+      "path": "assets/p03-00.wav",
+      "duration": 19.584,
+      "script_sha256": "219bfc6b859c47edcf31b3ee3ff14d2ff45a48187a99e540814c3603f5358dbe"
+    },
+    {
+      "scene": "p04",
+      "paragraph": 0,
+      "text": "La distribution locale utilise Python, SQLite et une identité locale. PostgreSQL et OIDC sont des options indépendantes. Chaque installation conserve son propre registre. Ce modèle ne fournit pas automatiquement une synchronisation entre entreprises.",
+      "path": "assets/p04-00.wav",
+      "duration": 17.877333,
+      "script_sha256": "4b7e8a70fdff1bce98ab26209e9403f07790e8826852dc931cd96e18324c078f"
+    },
+    {
+      "scene": "p05",
+      "paragraph": 0,
+      "text": "Les skills du plugin guident l’installation et le travail d’architecture avec un moteur AIR connecté. Leur installation seule ne connecte pas ChatGPT au poste. La publication dans l’annuaire OpenAI attend encore une clarification sur le fonctionnement local.",
+      "path": "assets/p05-00.wav",
+      "duration": 18.538667,
+      "script_sha256": "088e082308a25a3cab72ac56e50bfb1f022c86174d8d89dad4860c75f6ef7673"
+    },
+    {
+      "scene": "p06",
+      "paragraph": 0,
+      "text": "Le moteur, le plugin et les exemples Asteria sont publics sous licence Apache deux point zéro. Commencez par la distribution documentée et son kit de réception. AIR simule la conception. Il ne déploie pas les applications métier décrites dans vos plans.",
+      "path": "assets/p06-00.wav",
+      "duration": 17.002667,
+      "script_sha256": "fc60cd7396d03b629721c032e22316ae95cbaa81cc421722feed695dee4443ba"
+    }
+  ]
+}

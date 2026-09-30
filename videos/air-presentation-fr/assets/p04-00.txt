@@ -1,0 +1,1 @@
+La distribution locale utilise Python, SQLite et une identité locale. PostgreSQL et OIDC sont des options indépendantes. Chaque installation conserve son propre registre. Ce modèle ne fournit pas automatiquement une synchronisation entre entreprises.

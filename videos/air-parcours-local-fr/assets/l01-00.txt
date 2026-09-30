@@ -1,0 +1,1 @@
+Un dossier d’architecture peut être bien présenté tout en laissant des décisions importantes sans preuve. Ce parcours montre comment AIR rend ces limites visibles, pour que les équipes sachent quoi construire et quoi vérifier ensuite. Nous utilisons trois dossiers entièrement fictifs de la même entreprise : Asteria Industrie.

@@ -4,6 +4,8 @@
 
 Official architecture workflow plugin by **Yannick Huchard**. Apache-2.0.
 
+[Présentation et parcours vidéo des trois dossiers Asteria (français)](videos/README.md).
+
 Design, verify, simulate and prepare architecture dossiers for engineers, project managers and operations using an AIR installation controlled by your enterprise. AIR means Architecture Intermediate Representation. The stable plugin identifier is `air-local`; this public package is **0.1.4**.
 
 ## What is public, and what is required

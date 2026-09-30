@@ -1,0 +1,1 @@
+Les skills du plugin guident l’installation et le travail d’architecture avec un moteur AIR connecté. Leur installation seule ne connecte pas ChatGPT au poste. La publication dans l’annuaire OpenAI attend encore une clarification sur le fonctionnement local.

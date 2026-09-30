@@ -1,0 +1,2 @@
+# Preserve the bytes recorded in asset-provenance.json across Git checkouts.
+**/assets/** -text whitespace=cr-at-eol

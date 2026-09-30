@@ -1,0 +1,1 @@
+L’inconnue visible porte sur la fiabilité de la clé de déduplication fournie par l’ERP. Dans le reçu calculé, le résultat est UNKNOWN et la porte est bloquée. La suite proposée consiste à obtenir une confirmation sourcée de l’équipe ERP, puis à réviser et vérifier le dossier. Nous ne remplaçons pas cette confirmation par une supposition de l’agent.

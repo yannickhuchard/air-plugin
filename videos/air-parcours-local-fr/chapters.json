@@ -1,0 +1,48 @@
+{
+  "duration": 402.77,
+  "chapters": [
+    {
+      "id": "l01",
+      "title": "Lire les preuves avant de décider",
+      "start": 0,
+      "duration": 60.561,
+      "midpoint": 30.28
+    },
+    {
+      "id": "l02",
+      "title": "Une installation à la portée du poste",
+      "start": 60.561,
+      "duration": 66.513,
+      "midpoint": 93.817
+    },
+    {
+      "id": "l03",
+      "title": "D01 / Enregistrer une demande SAV",
+      "start": 127.07400000000001,
+      "duration": 66.556,
+      "midpoint": 160.352
+    },
+    {
+      "id": "l04",
+      "title": "D02 / Proposer une inspection",
+      "start": 193.63,
+      "duration": 69.863,
+      "midpoint": 228.561
+    },
+    {
+      "id": "l05",
+      "title": "D03 / Préparer une révocation",
+      "start": 263.493,
+      "duration": 66.577,
+      "midpoint": 296.781
+    },
+    {
+      "id": "l06",
+      "title": "Transmettre un dossier honnête",
+      "start": 330.07,
+      "duration": 72.7,
+      "midpoint": 366.42
+    }
+  ],
+  "caption_timing": "Measured paragraph durations; proportional phrase timing, not word-level ASR"
+}

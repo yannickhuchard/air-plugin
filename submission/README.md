@@ -30,8 +30,9 @@ Next-step material: [OpenAI clarification request](openai-clarification.md),
 The clarification was sent through authenticated OpenAI support on 2026-09-30,
 and escalation to a support specialist was confirmed. A response is pending;
 no eligibility approval is claimed.
-The public-route video and
-review cases remain unexecuted until the connection route is established.
+The public-route video and review cases remain unexecuted until the connection
+route is established. Separate [French local demonstration videos](../videos/README.md)
+show the product and generated Asteria views; they are not public-route acceptance.
 
 - Public package: AIR — Architecture Workspace 0.1.4, developed by Yannick Huchard.
 - Candidate route: a skills package, subject to review of its dependency on local AIR execution and a separately configured MCP connection.

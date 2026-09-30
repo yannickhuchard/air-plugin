@@ -1,0 +1,1 @@
+Le kit de réception public télécharge les artefacts de la candidate et vérifie leurs empreintes. Le reçu de la répétition confirme une installation neuve depuis le paquet, une installation hors ligne, une réinstallation qui préserve l’identité et la révision, puis une restauration qui conserve l’empreinte des données et révoque l’ancienne identité.

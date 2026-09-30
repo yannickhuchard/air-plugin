@@ -1,0 +1,1 @@
+Le dossier atelier demande de proposer une inspection humaine à partir de mesures fraîches, sans commande physique automatique. La fonction et le contrat portent cette séparation. Le travail prévu concerne la construction et la vérification du service de proposition. Aucune machine réelle n’est pilotée par cette démonstration.

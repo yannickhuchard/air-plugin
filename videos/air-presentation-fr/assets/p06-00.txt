@@ -1,0 +1,1 @@
+Le moteur, le plugin et les exemples Asteria sont publics sous licence Apache deux point zéro. Commencez par la distribution documentée et son kit de réception. AIR simule la conception. Il ne déploie pas les applications métier décrites dans vos plans.

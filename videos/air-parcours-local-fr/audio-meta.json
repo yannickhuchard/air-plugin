@@ -1,0 +1,151 @@
+{
+  "provider": "local Kokoro",
+  "voice": "ff_siwis",
+  "speed": 0.85,
+  "paragraphs": [
+    {
+      "scene": "l01",
+      "paragraph": 0,
+      "text": "Un dossier d’architecture peut être bien présenté tout en laissant des décisions importantes sans preuve. Ce parcours montre comment AIR rend ces limites visibles, pour que les équipes sachent quoi construire et quoi vérifier ensuite. Nous utilisons trois dossiers entièrement fictifs de la même entreprise : Asteria Industrie.",
+      "path": "assets/l01-00.wav",
+      "duration": 19.605333,
+      "script_sha256": "506b78c31d557f5a3252f8af16d69011452151d5bc6c867ae07954585bc5ae1e"
+    },
+    {
+      "scene": "l01",
+      "paragraph": 1,
+      "text": "Le premier concerne le service après-vente. Le deuxième prépare la maintenance connectée d’un atelier. Le troisième organise les arrivées, les mobilités et les départs. Ils partagent un contexte d’entreprise, une plateforme d’identité et une équipe d’intégration.",
+      "path": "assets/l01-01.wav",
+      "duration": 17.429333,
+      "script_sha256": "84da84d2eee5139f055ec6e8b9e0f65b420c143afb10d3c73815d50b002f1d20"
+    },
+    {
+      "scene": "l01",
+      "paragraph": 2,
+      "text": "Cette vidéo est un montage commenté de captures des vues réellement générées par le moteur public zéro point trente-quatre, candidate neuf. Elle ne montre ni une session ChatGPT en direct, ni l’exécution des applications métier futures. Les commentaires expliquent les résultats conservés dans le reçu de démonstration.",
+      "path": "assets/l01-02.wav",
+      "duration": 19.626667,
+      "script_sha256": "53a89c04b7e2fb44d3f06e4c64ad47f1f1febf590976943021dd9e90b01ed901"
+    },
+    {
+      "scene": "l02",
+      "paragraph": 0,
+      "text": "La première cible de déploiement est le poste de chaque architecte. Python suffit à l’installation documentée, avec SQLite et une identité locale par défaut. Docker, un service cloud et un fournisseur d’identité externe ne sont pas obligatoires. Les options PostgreSQL et OIDC répondent à des besoins distincts.",
+      "path": "assets/l02-00.wav",
+      "duration": 20.608,
+      "script_sha256": "b00e8598570988926d5191d57014d7263337f4f6a621342333474cb5139d6568"
+    },
+    {
+      "scene": "l02",
+      "paragraph": 1,
+      "text": "Le kit de réception public télécharge les artefacts de la candidate et vérifie leurs empreintes. Le reçu de la répétition confirme une installation neuve depuis le paquet, une installation hors ligne, une réinstallation qui préserve l’identité et la révision, puis une restauration qui conserve l’empreinte des données et révoque l’ancienne identité.",
+      "path": "assets/l02-01.wav",
+      "duration": 20.864,
+      "script_sha256": "139a693cf960285428495cd8ccd968f41a43618f1a228acde233ed26d36444e1"
+    },
+    {
+      "scene": "l02",
+      "paragraph": 2,
+      "text": "Ces résultats proviennent d’un environnement séparé sur le même poste Windows, avec Python trois point douze. Ils ne prouvent pas une réception sur une seconde machine physique. Le reçu conserve aussi la mention non exécuté pour la recette d’un client agent natif et pour le parcours public ChatGPT. C’est cette limite précise qui accompagne la distribution.",
+      "path": "assets/l02-02.wav",
+      "duration": 21.141333,
+      "script_sha256": "5d41130dac1d35ab96017aaf98b2e979ac0f91fc4967417e32664009a6431eb2"
+    },
+    {
+      "scene": "l03",
+      "paragraph": 0,
+      "text": "Ouvrons le dossier du service après-vente. L’exigence demande d’enregistrer une déclaration durable, distincte de toute décision de garantie. La vue relie cette exigence à la fonction Submit Claim, à son contrat, puis au travail de construction et de vérification. La chaîne permet de discuter le même objet avec les métiers et les ingénieurs.",
+      "path": "assets/l03-00.wav",
+      "duration": 21.248,
+      "script_sha256": "04c3ee5f7fa9a83b9cf36493eec041cbdd1c02a07386c2575addf1bc5414732e"
+    },
+    {
+      "scene": "l03",
+      "paragraph": 1,
+      "text": "Le tableau suivant décrit trois scénarios à exécuter lors de la réalisation : traiter un dépôt et son doublon, refuser une demande concernant un autre client, puis gérer une indisponibilité sans fabriquer de faux reçu. La colonne d’exécution indique non exécuté. Un résultat attendu ne devient pas un test réussi parce qu’il a été rédigé.",
+      "path": "assets/l03-01.wav",
+      "duration": 20.416,
+      "script_sha256": "bbae53cb5a227294bfab33424090180ec42e4e0089c9580d489033955794623d"
+    },
+    {
+      "scene": "l03",
+      "paragraph": 2,
+      "text": "L’inconnue visible porte sur la fiabilité de la clé de déduplication fournie par l’ERP. Dans le reçu calculé, le résultat est UNKNOWN et la porte est bloquée. La suite proposée consiste à obtenir une confirmation sourcée de l’équipe ERP, puis à réviser et vérifier le dossier. Nous ne remplaçons pas cette confirmation par une supposition de l’agent.",
+      "path": "assets/l03-02.wav",
+      "duration": 20.992,
+      "script_sha256": "45fc00193146893bbf7d608d7e727cbd4f8611fd045630495655d6c78278c981"
+    },
+    {
+      "scene": "l04",
+      "paragraph": 0,
+      "text": "Le dossier atelier demande de proposer une inspection humaine à partir de mesures fraîches, sans commande physique automatique. La fonction et le contrat portent cette séparation. Le travail prévu concerne la construction et la vérification du service de proposition. Aucune machine réelle n’est pilotée par cette démonstration.",
+      "path": "assets/l04-00.wav",
+      "duration": 20.629333,
+      "script_sha256": "7df6778634ac3334c02e3dc9c5bde93f8316b63e05a2691b6bb12df0eb57e43d"
+    },
+    {
+      "scene": "l04",
+      "paragraph": 1,
+      "text": "La réception future distingue une mesure nominale, une mesure périmée, puis un collecteur expiré ou une unité incompatible. Les résultats attendus précisent le comportement à développer. Là encore, les trois scénarios restent non exécutés. L’architecte transmet ainsi des critères concrets, sans prétendre que l’application a déjà été construite.",
+      "path": "assets/l04-01.wav",
+      "duration": 21.354667,
+      "script_sha256": "d2b348fd014e38b90aea3294bbce24178a4bcc84786416e012de52dcbf612bcb"
+    },
+    {
+      "scene": "l04",
+      "paragraph": 2,
+      "text": "Le contrôle de la démonstration donne VIOLATED pour l’observation périmée et garde la porte bloquée. Ce statut calculé ne doit pas être confondu avec le résultat inconnu prévu pour un futur scénario applicatif. La question ouverte demande quel seuil de fraîcheur rend une observation inutilisable. La suite proposée est de faire approuver ce seuil et de fournir une observation valide, puis de relancer les vérifications concernées.",
+      "path": "assets/l04-02.wav",
+      "duration": 23.978667,
+      "script_sha256": "8271a2bede5cc06fce59616bee84013c08d62b8364610a45fcd135b402a3ba21"
+    },
+    {
+      "scene": "l05",
+      "paragraph": 0,
+      "text": "Le troisième dossier concerne les identités. L’exigence demande une révocation traçable, tout en séparant proposition, approbation et exécution. La fonction prépare une proposition. La vue ne fournit aucune autorisation de supprimer un accès dans un système réel.",
+      "path": "assets/l05-00.wav",
+      "duration": 18.325333,
+      "script_sha256": "8874a538c5b02d8c2b8e56065fc8e1cc911580548610e397db10bc6823e10e88"
+    },
+    {
+      "scene": "l05",
+      "paragraph": 1,
+      "text": "Les scénarios prévus couvrent un départ nominal, des dates contradictoires et un compte non rapproché. Une contradiction doit conduire à un blocage et à la désignation du responsable de résolution. Une inconnue doit rester visible, sans action automatique sur un autre compte. Ces comportements sont des critères pour la phase d’ingénierie.",
+      "path": "assets/l05-01.wav",
+      "duration": 20.373333,
+      "script_sha256": "52914218cdaecd727f209418a04cba55072ff82b29b9120e652be3629a9b6404"
+    },
+    {
+      "scene": "l05",
+      "paragraph": 2,
+      "text": "Le reçu calculé conserve CONFLICTING et la porte bloquée. Dans la vue, une question demande également qui confirme la date de fin d’un prestataire dont l’échéance est absente. Ces réserves sont distinctes et doivent être traitées avec leurs sources. La suite proposée est un arbitrage documenté entre les responsables concernés, puis une nouvelle révision. Choisir arbitrairement la source la plus commode masquerait le risque au lieu de le résoudre.",
+      "path": "assets/l05-02.wav",
+      "duration": 23.978667,
+      "script_sha256": "04b23605b21b1ee2ca4bca0a0edd3489f208ccff32d183346b25f973b9ebab55"
+    },
+    {
+      "scene": "l06",
+      "paragraph": 0,
+      "text": "Les trois vues possèdent une section registre et sources. Les objets y sont rattachés à leurs révisions, et chaque vue identifie sa baseline par une empreinte. Une correction passe par une nouvelle révision et une proposition. Cela permet de conserver le contexte exact utilisé pour produire le dossier, plutôt que de modifier silencieusement son histoire.",
+      "path": "assets/l06-00.wav",
+      "duration": 20.970667,
+      "script_sha256": "a4751d35482b8a37d3584693ea3a7ae74a98124b60b92655e6eec2df598358fe"
+    },
+    {
+      "scene": "l06",
+      "paragraph": 1,
+      "text": "Le livrable destiné aux ingénieurs, aux chefs de projet et aux équipes d’exploitation doit inclure les exigences, les contrats, le travail prévu, les scénarios de réception et les questions ouvertes. Dans cette démonstration, neuf tests des futurs systèmes métier restent non exécutés. Les trois portes bloquées sont des résultats utiles : elles indiquent les éléments à résoudre avant d’accorder la réception concernée.",
+      "path": "assets/l06-01.wav",
+      "duration": 22.677333,
+      "script_sha256": "04101fc9dabd7b23402f0c82a70135bb09fb3050e6422cc8f41b08c4644504ea"
+    },
+    {
+      "scene": "l06",
+      "paragraph": 2,
+      "text": "Le moteur et les exemples sont disponibles dans le dépôt public AIR Engine. Le plugin Architecture Workspace fournit les skills d’accompagnement, avec un moteur installé séparément et une connexion propre au projet. La publication dans l’annuaire OpenAI attend une réponse sur cette topologie locale. Cette vidéo documente le parcours local ; la recette publique ChatGPT et la vidéo correspondante restent à effectuer lorsque cette voie sera confirmée.",
+      "path": "assets/l06-02.wav",
+      "duration": 25.152,
+      "script_sha256": "06ae1c8798ee463a308074633b029b5d6982d3084caad8f342507fe8ac884607"
+    }
+  ]
+}

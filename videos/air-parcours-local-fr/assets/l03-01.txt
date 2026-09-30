@@ -1,0 +1,1 @@
+Le tableau suivant décrit trois scénarios à exécuter lors de la réalisation : traiter un dépôt et son doublon, refuser une demande concernant un autre client, puis gérer une indisponibilité sans fabriquer de faux reçu. La colonne d’exécution indique non exécuté. Un résultat attendu ne devient pas un test réussi parce qu’il a été rédigé.

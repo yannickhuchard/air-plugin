@@ -1,0 +1,1 @@
+Les scénarios prévus couvrent un départ nominal, des dates contradictoires et un compte non rapproché. Une contradiction doit conduire à un blocage et à la désignation du responsable de résolution. Une inconnue doit rester visible, sans action automatique sur un autre compte. Ces comportements sont des critères pour la phase d’ingénierie.

@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:07.935
+Concevoir une transformation exige de savoir ce qui est établi, ce qui manque, et ce qui se contredit.
+
+00:00:07.935 --> 00:00:15.005
+AIR organise ces informations pour préparer des plans d’architecture vérifiables, avant leur réalisation
+
+00:00:15.005 --> 00:00:16.083
+par les équipes.
+
+00:00:18.783 --> 00:00:25.375
+Une exigence est reliée à une fonction, à son contrat et au travail prévu. L’architecte peut retrouver
+
+00:00:25.375 --> 00:00:31.775
+les sources et les révisions utilisées. Les inconnues restent visibles dans le dossier transmis aux
+
+00:00:31.775 --> 00:00:35.743
+ingénieurs, aux chefs de projet et aux équipes d’exploitation.
+
+00:00:38.443 --> 00:00:44.971
+Dans l’entreprise fictive Asteria, le service après-vente manque d’une confirmation de l’ERP. L’atelier
+
+00:00:44.971 --> 00:00:51.373
+dispose d’une observation périmée. Le dossier des identités contient des sources contradictoires. AIR
+
+00:00:51.373 --> 00:00:57.462
+conserve respectivement les résultats inconnu, violé et contradictoire. Les trois portes restent
+
+00:00:57.462 --> 00:00:58.027
+bloquées.
+
+00:01:00.727 --> 00:01:08.307
+La distribution locale utilise Python, SQLite et une identité locale. PostgreSQL et OIDC sont des options
+
+00:01:08.307 --> 00:01:15.887
+indépendantes. Chaque installation conserve son propre registre. Ce modèle ne fournit pas automatiquement
+
+00:01:15.887 --> 00:01:18.604
+une synchronisation entre entreprises.
+
+00:01:21.304 --> 00:01:28.633
+Les skills du plugin guident l’installation et le travail d’architecture avec un moteur AIR connecté.
+
+00:01:28.633 --> 00:01:36.034
+Leur installation seule ne connecte pas ChatGPT au poste. La publication dans l’annuaire OpenAI attend
+
+00:01:36.034 --> 00:01:39.843
+encore une clarification sur le fonctionnement local.
+
+00:01:42.543 --> 00:01:49.599
+Le moteur, le plugin et les exemples Asteria sont publics sous licence Apache deux point zéro. Commencez
+
+00:01:49.599 --> 00:01:56.589
+par la distribution documentée et son kit de réception. AIR simule la conception. Il ne déploie pas les
+
+00:01:56.589 --> 00:01:59.546
+applications métier décrites dans vos plans.

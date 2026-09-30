@@ -1,0 +1,1 @@
+La première cible de déploiement est le poste de chaque architecte. Python suffit à l’installation documentée, avec SQLite et une identité locale par défaut. Docker, un service cloud et un fournisseur d’identité externe ne sont pas obligatoires. Les options PostgreSQL et OIDC répondent à des besoins distincts.

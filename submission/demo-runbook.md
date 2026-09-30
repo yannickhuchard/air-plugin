@@ -1,7 +1,21 @@
 # Public demonstration and reviewer acceptance
 
-Status: PREPARED, NOT RECORDED, NOT EXECUTED IN PUBLIC CHATGPT ROUTE.
+Status: local presentation and narrated capture montage produced separately;
+public ChatGPT route NOT_EXECUTED and reviewer recording NOT_RECORDED.
 Engine: public 0.34.0rc9. Plugin: 0.1.4. All company data must be synthetic Asteria data.
+
+## Local video materials — 30 September 2026
+
+See [videos and validation](../videos/README.md): a 2:01 editorial presentation
+and a 6:43 local walkthrough. These use synthetic narration and actual browser
+captures of the unmodified generated dossier views. The receipt extract is an
+explicitly labelled editorial rendering of its fields. They contain no staged
+agent calls, live command execution or fabricated approvals.
+
+Walkthrough chapters: 0:00 purpose, 1:01 local receipt, 2:07 SAV, 3:14 workshop,
+4:23 identities, 5:30 handoff and limitations. Exact times are in `chapters.json`.
+This is supplementary product material. The live native-agent sequence and public
+reviewer recording below remain outstanding; the montage does not close them.
 
 ## Prerequisites and evidence
 
@@ -13,7 +27,7 @@ Record exact engine/plugin/client versions, fixture baseline references, enabled
 tools and effective identity/permissions. Never record a token, credential file,
 account settings, private filesystem path or unrelated conversation.
 
-## Local walkthrough (target 6–8 minutes; recording still to make)
+## Original live walkthrough plan (target 6–8 minutes)
 
 | Sequence | Show | Evidence and words to retain |
 | --- | --- | --- |

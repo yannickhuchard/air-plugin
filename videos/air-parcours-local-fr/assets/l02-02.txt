@@ -1,0 +1,1 @@
+Ces résultats proviennent d’un environnement séparé sur le même poste Windows, avec Python trois point douze. Ils ne prouvent pas une réception sur une seconde machine physique. Le reçu conserve aussi la mention non exécuté pour la recette d’un client agent natif et pour le parcours public ChatGPT. C’est cette limite précise qui accompagne la distribution.

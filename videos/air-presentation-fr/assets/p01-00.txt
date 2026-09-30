@@ -1,0 +1,1 @@
+Concevoir une transformation exige de savoir ce qui est établi, ce qui manque, et ce qui se contredit. AIR organise ces informations pour préparer des plans d’architecture vérifiables, avant leur réalisation par les équipes.

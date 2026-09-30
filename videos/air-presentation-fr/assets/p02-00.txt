@@ -1,0 +1,1 @@
+Une exigence est reliée à une fonction, à son contrat et au travail prévu. L’architecte peut retrouver les sources et les révisions utilisées. Les inconnues restent visibles dans le dossier transmis aux ingénieurs, aux chefs de projet et aux équipes d’exploitation.
