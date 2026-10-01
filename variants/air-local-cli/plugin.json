@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "air-local",
-  "version": "0.1.5",
-  "description": "AIR — Architecture Workspace : conception, vérification et simulation via la CLI du moteur AIR local installé séparément.",
+  "version": "0.1.7",
+  "description": "Design, verify, simulate and prepare architecture dossiers using the separately installed local AIR Engine CLI.",
   "author": {
     "name": "Yannick Huchard",
     "url": "https://github.com/yannickhuchard"
@@ -16,5 +16,43 @@
     "sqlite",
     "cli"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AIR — Architecture Workspace",
+        "shortDescription": "Design architecture with AIR",
+        "longDescription": "Architecture workflow instructions and a Python CLI helper by Yannick Huchard. The skills guide use of the separately installed AIR Engine commands for baseline review, change preparation, declared-model simulation and engineering handoff. Requires Python 3.11+, a separately installed AIR Engine, local command execution, an authorized project and its authenticated loopback HTTP service. SQLite and local authentication are the defaults. The plugin supplies skills and a CLI helper; the engine is installed separately. This workflow requires a client with local execution and access to the selected AIR project. A client without local execution cannot run the CLI workflow. Simulation results describe declared models; business applications are built later. Local tool results may be processed by the chosen model provider: use only authorized data.",
+        "developerName": "Yannick Huchard",
+        "category": "Productivity",
+        "capabilities": [
+          "Architecture workflow guidance",
+          "Local AIR CLI"
+        ],
+        "websiteURL": "https://github.com/yannickhuchard/air-plugin",
+        "supportURL": "https://github.com/yannickhuchard/air-plugin/issues",
+        "privacyPolicyURL": "https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/yannickhuchard/air-plugin/blob/main/TERMS.md",
+        "defaultPrompt": [
+          "Set up AIR for this authorized architecture project.",
+          "Review this AIR dossier and explain its next steps.",
+          "Prepare the engineering handoff for this AIR baseline."
+        ],
+        "brandColor": "#00BFC1",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/air-local-setup/SKILL.md",
+      "publication": {
+        "countries": [],
+        "release_notes": "Skills-only local CLI package. Listing metadata follows the public submission limits; setup and design skills explicitly disclose the separately installed engine and local executor. Setup instructions require explicit installation authorization, release verification and isolated local configuration. The CLI helper and design skill are unchanged from the tested 0.1.5 candidate.",
+        "translations": {
+          "fr-FR": {
+            "subtitle": "Concevoir avec AIR",
+            "description": "Skills officiels de Yannick Huchard pour concevoir, vérifier, simuler et livrer des dossiers d'architecture. Python 3.11+, moteur AIR installé séparément, exécuteur local et service HTTP loopback authentifié requis. SQLite et identité locale par défaut. Les simulations portent sur les modèles déclarés. Les résultats transmis au modèle doivent respecter les règles de votre entreprise."
+          }
+        }
+      }
+    }
+  }
 }

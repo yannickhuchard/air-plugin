@@ -7,7 +7,9 @@ This is guidance to prepare, not eligibility approval or acceptance of a submiss
 
 ## Package and prerequisites
 
-Source: `variants/air-local-cli`, same `air-local` identity, candidate version 0.1.5.
+Source: `variants/air-local-cli`, public `air-local` identity, current version 0.1.7.
+The historical technical receipt below covers 0.1.5. The helper/design-skill bytes
+remain identical; setup safeguards and listing metadata changed in 0.1.7.
 Build: `python scripts/build_plugin.py --variant cli --output-dir dist/cli`.
 The existing 0.1.4 MCP distribution and directory draft are preserved.
 The CLI ZIP contains the two skills, their helper/resources, manifests, logo and
@@ -60,7 +62,13 @@ prompt-injection resistance, an imported plugin, a second physical workstation,
 or a newly supported ChatGPT surface. The original cases remain unexecuted for
 public submission until tested in the agreed client with the imported package.
 
-## Remaining reviewer sequence
+## Submission and next steps
+
+On 1 October 2026, **0.1.7 was formally submitted** into the existing draft.
+Both skill scans passed and the package detail page shows **In review**.
+Only the two manifest names were adapted to the legacy portal-assigned identity.
+The CLI archive has no MCP configuration. The portal's existing MCP warning and
+category warning did not block submission. [Record](openai-upload-2026-10-01.json).
 
 Technical rehearsal on 30 September 2026: **8/8 PASS_SCOPED** on Windows using
 the separately installed public rc9 engine. [Receipt](cli-review-results.json).
@@ -70,18 +78,16 @@ identically across two calls. This is a model result, not measured application l
 The package/helper tests also pass: **15 tests**, without CI. Both skill frontmatter
 checks pass. These checks do not replace the client and directory steps below.
 
-1. Obtain confirmation of eligible local execution surfaces and how to convert
-   the existing legacy draft in place. Do not create a duplicate listing.
-2. Upload the candidate to that existing draft through the confirmed path; run
-   new scans. The 0.1.4 Passed scans do not cover the changed 0.1.5 skills.
-3. In the agreed clean reviewer setup, invoke the imported skills with the five
-   positive/three negative user prompts. Use the CLI equivalents, local synthetic
-   project and generated exact references; record actual outcomes separately.
-4. Record a real client walkthrough of installation/preflight, baseline review,
-   change preparation, simulation and handoff, including a prerequisite/access
-   refusal. Keep credentials and unrelated screen content out of the recording.
-5. Submit only after those prerequisites are met. A public listing is distinct
-   from runtime availability. Do not claim ordinary ChatGPT can execute local CLI.
+1. Await the review decision and local-execution eligibility feedback. Listing
+   approval remains distinct from runtime availability on a particular client.
+2. If OpenAI requests client evidence for the product-specific review, run the
+   imported skills in the agreed clean client with synthetic data and record the
+   actual results separately from the existing technical CLI receipt.
+3. Supply a real client walkthrough if requested. The current official submission
+   documentation does not require MCP review cases or a demo recording for a
+   Skills-only plugin. Earlier preparation notes treated these too broadly.
+4. Publish the approved version after acceptance. Do not claim ordinary ChatGPT
+   can execute local CLI without a local executor.
 
 The two [public product videos](../videos/README.md) explain AIR and Asteria.
 They are supplemental materials, not the imported-client reviewer recording.

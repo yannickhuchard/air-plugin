@@ -1,4 +1,4 @@
-# AIR — Architecture Workspace : variante CLI 0.1.5
+# AIR — Architecture Workspace : variante CLI 0.1.7
 
 Paquet de préparation pour la revue spécifique d'exécution locale OpenAI.
 Même identité `air-local`, développeur Yannick Huchard, Apache-2.0.

@@ -133,7 +133,8 @@ def rehearse(engine, output):
         denied=cli('bundle-put',[changed],credential='reader.json',expected=(1,))
         assert denied['error']=='AIR_HTTP' and denied['status']==403
         passed('CLI-N3','Reader write refused by AIR authentication/authorization',denied)
-        report={'schema':'air.cli-review/1','engine_version':version,'plugin_version':'0.1.5','status':'PASS_SCOPED','cases':cases,'scope':'Technical CLI integration on one Windows workstation; synthetic data only','openai_directory':'NOT_SUBMITTED','native_skill_behavior':'NOT_INDEPENDENTLY_TESTED','reviewer_recording':'NOT_RECORDED','business_applications_executed':False,'ci_executed':False,'transcript_sha256':hashlib.sha256((work/'transcript.json').read_bytes()).hexdigest()}
+        package_version=json.loads((ROOT/'variants/air-local-cli/plugin.json').read_text(encoding='utf-8'))['version']
+        report={'schema':'air.cli-review/1','engine_version':version,'plugin_version':package_version,'status':'PASS_SCOPED','cases':cases,'scope':'Technical CLI integration on one Windows workstation; synthetic data only','openai_directory':'NOT_ASSESSED_BY_THIS_REHEARSAL','native_skill_behavior':'NOT_INDEPENDENTLY_TESTED','reviewer_recording':'NOT_RECORDED','business_applications_executed':False,'ci_executed':False,'transcript_sha256':hashlib.sha256((work/'transcript.json').read_bytes()).hexdigest()}
         write(output/'cli-review.json',report)
         return report
     finally:

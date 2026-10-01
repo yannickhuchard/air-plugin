@@ -1,6 +1,29 @@
 # Official ChatGPT/Codex directory submission
 
-This directory contains preparation material, **not evidence of submission or approval**.
+**1 October 2026: AIR Skills-only CLI 0.1.7 is formally submitted to OpenAI.**
+The package detail page confirms **In review** and both skills show **Checks passed**.
+The existing draft is preserved. Five positive CLI scenarios, three negative
+scenarios and the supplementary Asteria video are saved in its review information.
+The video is explicitly described as a narrated montage of generated views,
+not an imported-client recording. The local engine dependency is disclosed.
+Terms and the six publisher attestations were accepted after explicit user approval.
+Category and legacy MCP warnings were non-blocking in the final submission dialog.
+[Submission record](openai-upload-2026-10-01.json). **Approval/publication are pending.**
+
+The following dated observations preserve the earlier preparation history.
+
+1 October 2026: the **0.1.6 Skills-only CLI package is uploaded into the existing
+draft**. The portal accepted the archive after its two manifest names were adapted
+to the legacy draft's assigned package name. The skills/helper are unchanged from
+the tested 0.1.5 candidate; **16 local package tests pass**. Automated scans and the
+final submission step remain in progress. No submitted or approved status is
+claimed until the portal confirms it. The portal still displays the legacy MCP
+association; the CLI archive contains no MCP configuration.
+
+The current [submission documentation](https://developers.openai.com/plugins/deploy/submission)
+does not require MCP test cases or a demo recording for Skills-only plugins. Earlier
+notes below treated those prerequisites too broadly. The synthetic recipe and
+supplementary videos are preserved. [0.1.6 metadata notes](cli-0.1.6-notes.md).
 
 Latest: specialist Paul replied in case **#16084977**. Prepare the
 [Skills-only/local CLI candidate and reviewer recipe](cli-review.md), preserving

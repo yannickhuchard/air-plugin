@@ -55,6 +55,15 @@ def build(source: Path, output: Path, variant: str = 'mcp') -> dict:
         raise ValueError('AIR Local must use the project connection')
     if variant == 'cli' and any(p.name in ('mcp.json', '.mcp.json') for p in source.rglob('*')):
         raise ValueError('CLI variant cannot contain MCP configuration')
+    if variant == 'cli':
+        interface = compat['interface']
+        overlay = portable.get('extensions', {}).get('com.openai', {})
+        if overlay.get('interface') != interface:
+            raise ValueError('CLI listing metadata must agree across package formats')
+        for field, limit in (('displayName', 30), ('shortDescription', 30), ('longDescription', 4000)):
+            value = interface.get(field)
+            if not isinstance(value, str) or not value.strip() or len(value) > limit:
+                raise ValueError('Public listing field invalid: ' + field)
     output = output.resolve()
     if output == source or output.is_relative_to(source):
         raise ValueError('Write artifacts outside the plugin source')

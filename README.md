@@ -6,10 +6,11 @@ Official architecture workflow plugin by **Yannick Huchard**. Apache-2.0.
 
 [Présentation et parcours vidéo des trois dossiers Asteria (français)](videos/README.md).
 
-**Local CLI review candidate:** [Skills-only variant 0.1.5](variants/air-local-cli/README.md)
-and [review procedure](submission/cli-review.md), prepared following specialist
-guidance in case #16084977. Public-directory eligibility and migration of the
-existing draft remain pending. The 0.1.4 distribution below is unchanged.
+**OpenAI submission:** [Skills-only CLI 0.1.7](variants/air-local-cli/README.md)
+was formally submitted on 1 October 2026. The package detail page confirms
+**In review**, with both skill scans passed. [Submission record](submission/openai-upload-2026-10-01.json).
+Directory approval and publication remain pending. The 0.1.4 distribution below
+is unchanged.
 
 Design, verify, simulate and prepare architecture dossiers for engineers, project managers and operations using an AIR installation controlled by your enterprise. AIR means Architecture Intermediate Representation. The stable plugin identifier is `air-local`; this public package is **0.1.4**.
 

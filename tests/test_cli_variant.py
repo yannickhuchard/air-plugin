@@ -42,6 +42,17 @@ def test_missing_engine_is_actionable_and_does_not_execute(tmp_path, capsys, mon
     assert json.loads(capsys.readouterr().err)['error'] == 'AIR_ENGINE_MISSING'
 
 
+def test_cli_rejects_listing_beyond_submission_limits(tmp_path):
+    source = Path(shutil.copytree(ROOT / 'variants/air-local-cli', tmp_path / 'source'))
+    for manifest in (source / 'plugin.json', source / '.codex-plugin/plugin.json'):
+        data = json.loads(manifest.read_text(encoding='utf-8'))
+        interface = (data['extensions']['com.openai']['interface'] if manifest.parent == source else data['interface'])
+        interface['shortDescription'] = 'x' * 31
+        manifest.write_text(json.dumps(data), encoding='utf-8')
+    with pytest.raises(ValueError, match='shortDescription'):
+        builder.build(source, tmp_path / 'bad', 'cli')
+
+
 @pytest.fixture
 def configured(tmp_path):
     engine=tmp_path/'engine';home=tmp_path/'home'
