@@ -1,69 +1,45 @@
-# AIR — Architecture Workspace
+# AIR · Architecture Workspace
 
-<img src="assets/logo.png" alt="Logo AIR : un A formé de plans structurels reliés" width="128">
+<img src="assets/logo.png" alt="Logo AIR" width="112">
 
-Plugin officiel du projet **AIR — Architecture Intermediate Representation**.
-**Auteur et développeur officiel : Yannick Huchard.**
+**Votre assistant vous accompagne du besoin métier au dossier d’architecture vérifiable.**
 
-- Source publique du plugin : https://github.com/yannickhuchard/air-plugin
-- Dépôt du moteur (accès séparé) : https://github.com/yannickhuchard/air-engine
-- Identifiant : `air-local` ; version du plugin : **0.1.4**.
-- Licence : **Apache-2.0**, confirmée par Yannick Huchard le 28 septembre 2026 ; voir `LICENSE` et `NOTICE`.
-- Moteur associé à cette livraison : **0.34.0rc9**, qualifié séparément du plugin.
-- Deux skills : installation/connexion locale et travail sur un dossier d'architecture.
+Plugin officiel AIR, créé par **Yannick Huchard**, sous Apache-2.0. Il apporte deux skills : installer/connecter le moteur, puis concevoir et faire évoluer votre dossier. Le moteur reste sur le poste ou dans l’environnement choisi par votre organisation.
 
-Le plugin accompagne un moteur AIR installé par entreprise ou par architecte. Il
-ne nécessite aucun hébergement central AIR. SQLite et l'authentification locale
-restent les valeurs par défaut ; PostgreSQL et OIDC restent optionnels.
+## Commencer en quatre étapes
 
-Le nom affiché **AIR — Architecture Workspace** explicite le domaine sans changer
-le nom du langage AIR ni l’identifiant stable `air-local`. Le logo représente un A
-structurel et un nœud de modèle ; il a été créé pour AIR avec assistance générative.
+1. **Installer le moteur :** [air-engine](https://github.com/yannickhuchard/air-engine), Python 3.11+, puis `python scripts/install.py --start`. SQLite et identité locale sont les valeurs par défaut.
+2. **Installer ce plugin :** télécharger le paquet depuis [les releases](https://github.com/yannickhuchard/air-plugin/releases) ou utiliser la marketplace de votre client.
+3. **Connecter votre projet :** demander au skill `air-local-setup` de configurer la connexion MCP. Installer un plugin ne connecte pas automatiquement ChatGPT à votre poste.
+4. **Construire le dossier :** décrire votre besoin, puis laisser l’assistant vous guider sur les informations et preuves manquantes.
 
-## Installation et prérequis publics
+> « Utilise AIR pour concevoir ce projet. Pose les questions une par une, conserve les choix et leurs conséquences, vérifie la préparation et génère le site du dossier. »
 
-Le plugin et le moteur sont distribués publiquement, dans des dépôts séparés.
-Télécharger le moteur depuis https://github.com/yannickhuchard/air-engine puis suivre
-son guide d’installation et les trois dossiers Asteria inclus. Sans moteur installé
-et connexion MCP utilisable, le plugin ne peut pas vérifier ni écrire un dossier AIR.
+## Comment le plugin vous guide
 
-Support : [GitHub Issues](https://github.com/yannickhuchard/air-plugin/issues).
-[Confidentialité](https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md) ·
-[Conditions et licence](https://github.com/yannickhuchard/air-plugin/blob/main/TERMS.md).
+L’assistant lit la version réelle du dossier, identifie les écarts, prépare les objets et vous aide à décider. Le moteur vérifie le modèle. Les sources et révisions restent traçables ; une conversation seule n’est pas le référentiel.
 
-## Installer le paquet
+Avec un moteur disposant des fonctions récentes, vous pouvez aussi demander :
 
-Installer ce dossier comme plugin local avec le gestionnaire de plugins du client.
-Il contient un manifeste portable `plugin.json` et le manifeste de compatibilité
-Codex `.codex-plugin/plugin.json`. Dans Codex, le skill Plugin Creator peut ajouter
-ce dossier à votre marketplace personnelle, sans écraser les autres entrées.
-Ouvrir ensuite une nouvelle conversation et demander :
+> « Actualise les News, les points de décision et les questions ouvertes, puis prépare les vidéos de cette version. »
 
-> Utilise AIR Local pour installer ou connecter AIR au référentiel de cette entreprise.
+`air_query_project_updates` lit ces informations ; `air_compile_deliverables` régénère le site ; `air_refresh_videos` prépare les compositions sourcées. Le rendu MP4 utilise un atelier optionnel via `air videos-refresh ... --apply --render`. Ces fonctions nécessitent le moteur 0.35 de développement ; elles ne sont pas ajoutées à rc9 par l’installation du plugin. Vérifier le catalogue du serveur avant de les appeler.
 
-Le skill `air-local-setup` utilise l'installateur Python et `air ide-setup` du dépôt
-officiel. Il conserve la connexion MCP au niveau du projet : aucun serveur global,
-jeton, identifiant de tunnel ou chemin propre au développeur n'est distribué.
-Le moteur n'est pas inclus dans ce petit paquet de skills. La distribution publique du moteur est disponible sans invitation GitHub.
-La branche principale peut contenir une version de développement : sélectionner
-la version du moteur reçue par l'entreprise, indépendamment de celle du plugin.
+## Choisir votre client
 
-## Données et limites
+| Client | Connexion |
+| --- | --- |
+| Codex | Plugin et MCP du projet ; ouvrir une nouvelle conversation après installation |
+| Claude Code | Skills et MCP du projet ; format de plugin Claude disponible dans ce paquet |
+| ChatGPT | Skills et connexion MCP distante autorisée ; le moteur local doit être accessible au client |
+| Autre IDE agentique | CLI/MCP et skills portables, selon les capacités du client |
 
-Un freelance utilise un home AIR, une identité et un référentiel distincts par client.
-Les installations autonomes ne se synchronisent pas automatiquement.
-Le stockage local ne rend pas un modèle cloud local : les contenus transmis à
-ChatGPT, Claude ou un autre fournisseur suivent les règles de ce fournisseur et
-de l'entreprise. Sélectionner uniquement les données autorisées pour cet usage.
+Pour Claude Code, charger le dossier en développement avec `claude --plugin-dir ./plugins/air-local`. Une marketplace propre au projet permet aussi la distribution. Voir le README à la racine du dépôt public pour les commandes. Ce format n’établit pas une présence dans la marketplace officielle Anthropic ni une recette native de Claude.
 
-Codex utilise la connexion MCP locale du projet. ChatGPT nécessite sa propre
-connexion distante, par exemple un tunnel MCP sécurisé vers le poste. Le plugin
-n'installe pas ce tunnel et ne rafraîchit pas automatiquement son catalogue.
-La prise en charge du format portable par chaque IDE doit être vérifiée ; ce
-paquet n'est pas une certification de tous les clients mentionnés dans AIR.
+## Versions, données et support
 
-« Officiel » désigne l'auteur du projet AIR, pas une certification par OpenAI ou
-Anthropic. La redistribution suit Apache-2.0. La distribution publique sur GitHub ne signifie pas une approbation ni une présence
-dans l’annuaire officiel ChatGPT/Codex. Aucun SLA contractuel n’est fourni. Consulter le dépôt pour le
-périmètre G1 local reçu ; le paquet de skills ne qualifie pas une nouvelle version
-du moteur. Les preuves P07/P08 restent distinctes de ce plugin.
+Paquet source **0.1.8** ; moteur et plugin ont des versions indépendantes. Le dossier ProxiBot et les fonctionnalités récentes restent des exemples de développement. L’[annuaire ChatGPT](https://github.com/yannickhuchard/air-plugin/blob/main/submission/README.md) a sa propre revue ; distribution GitHub et approbation de plateforme sont distinctes.
+
+Un freelance conserve une installation, une identité et un référentiel séparés par client. Les installations ne se synchronisent pas automatiquement. Les extraits envoyés à un modèle cloud suivent les règles de ce fournisseur et de votre organisation. Aucun jeton ni endpoint privé n’est inclus dans ce plugin.
+
+[Moteur](https://github.com/yannickhuchard/air-engine) · [Plugin public](https://github.com/yannickhuchard/air-plugin) · [Support](https://github.com/yannickhuchard/air-plugin/issues) · [Confidentialité](https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md) · [Licence](LICENSE)
