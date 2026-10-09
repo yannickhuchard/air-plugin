@@ -63,3 +63,8 @@ Le moteur inclut `fixtures/enterprise/asteria/README.md` : SAV, atelier et ident
 dans une entreprise fictive. Suivre ce guide pour une démonstration isolée. Distinguer
 PASS_SCOPED du parcours, portes métier bloquées et tests NOT_EXECUTED. Ne pas traiter
 les exemples comme des données réelles ni comme un référentiel déjà connecté.
+
+Pour Claude Code, utiliser `ide-setup` avec `client: claude-code` et installer les
+skills avec le layout claude. Le plugin ne porte aucun serveur MCP global : la
+connexion reste propre au projet. Pour les nouvelles fonctions News/vidéos,
+vérifier le catalogue courant ; un moteur rc9 ne les expose pas.

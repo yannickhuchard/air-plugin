@@ -1,53 +1,60 @@
-# AIR — Architecture Workspace
+# AIR · Architecture Workspace
 
-<img src="plugins/air-local/assets/logo.png" alt="AIR architecture mark" width="128">
+<img src="plugins/air-local/assets/logo.png" alt="Logo AIR" width="112">
 
-Official architecture workflow plugin by **Yannick Huchard**. Apache-2.0.
+**Concevez un dossier d’architecture clair et vérifiable avec votre assistant agentique.**
 
-[Présentation et parcours vidéo des trois dossiers Asteria (français)](videos/README.md).
+AIR relie besoins métier, composants, données, décisions et preuves. Ce plugin fournit les skills pour installer le moteur puis faire progresser le dossier, question par question. Créé par **Yannick Huchard**, sous [Apache-2.0](LICENSE).
 
-**OpenAI submission:** [Skills-only CLI 0.1.7](variants/air-local-cli/README.md)
-was formally submitted on 1 October 2026. The package detail page confirms
-**In review**, with both skill scans passed. [Submission record](submission/openai-upload-2026-10-01.json).
-Directory approval and publication remain pending. The 0.1.4 distribution below
-is unchanged.
+[Découvrir le moteur](https://github.com/yannickhuchard/air-engine) · [Guide du plugin](plugins/air-local/README.md) · [Vidéos](videos) · [Support](SUPPORT.md)
 
-Design, verify, simulate and prepare architecture dossiers for engineers, project managers and operations using an AIR installation controlled by your enterprise. AIR means Architecture Intermediate Representation. The stable plugin identifier is `air-local`; this public package is **0.1.4**.
+## Votre premier parcours
 
-## What is public, and what is required
+1. Installer le [moteur AIR](https://github.com/yannickhuchard/air-engine) avec Python 3.11+ : `python scripts/install.py --start`. Pas de Docker ni cloud obligatoire.
+2. Installer ce plugin avec le parcours de votre client ci-dessous.
+3. Demander : **« Utilise AIR pour connecter ce projet, puis montre-moi ce qui manque dans le dossier. Pose les questions une par une. »**
+4. Lire les sources, décider, vérifier avec AIR et générer les livrables. Les trois exemples Asteria du moteur permettent de découvrir ce cycle.
 
-This repository contains the plugin's two skills, logo, manifests, license, packaging code and public documentation. It contains no enterprise data, tokens, runtime database, private repository history or shared MCP server.
-
-**The AIR engine is a separate public prerequisite:** [sources and releases](https://github.com/yannickhuchard/air-engine). Install a reviewed engine release and explore the three included synthetic Asteria dossiers. For a dossier workflow, connect your organization's AIR MCP service separately. Installing this plugin does not grant engine access or automatically connect a workstation to ChatGPT.
-
-For ChatGPT, a local stdio MCP process is not a remote connection. Your organization needs an authorized remote MCP connection and a deployment accepted by the client. The current plugin is not listed or approved in the official ChatGPT/Codex directory. Its local-engine dependency requires review for that publication channel.
-
-## Install the public package
-
-See the [free distribution and ChatGPT access assessment](DISTRIBUTION.md) for
-the proposed public-engine rollout and the remaining connection and review requirements.
-
-Download the ZIP and `plugin-package.json` from [Releases](https://github.com/yannickhuchard/air-plugin/releases). Verify the ZIP's SHA-256 before extracting the `air-local` folder. Install it through your client's supported local-plugin flow.
-
-For a Git marketplace in Codex:
+## Installer dans Codex
 
 ```text
 codex plugin marketplace add yannickhuchard/air-plugin --ref main
 codex plugin add air-local@air-official
 ```
 
-The catalog is `.agents/plugins/marketplace.json`. Availability of local/Git marketplaces varies by client; this command does not publish to the universal directory. Open a new conversation after installation. Do not copy credentials or enterprise data into the plugin directory.
+## Installer dans Claude Code
 
-Example prompt: “Use AIR to review the architecture dossier in this project's configured registry.” If the engine or connection is missing, the plugin reports that prerequisite rather than inventing a result.
-
-## Development
-
-Python 3.11+ builds the ZIP with no third-party dependency:
+Dans une session Claude Code :
 
 ```text
-python scripts/build_plugin.py --output-dir dist/plugin
+/plugin marketplace add yannickhuchard/air-plugin
+/plugin install air-local@air-official
 ```
 
-Packaging tests use pytest: `python -m pytest -q tests/test_plugin_package.py`. No CI workflow is enabled. Engine versions, engine qualification and plugin versions are separate; package installation is not production or normative qualification.
+Pour essayer le clone sans installation : `claude --plugin-dir ./plugins/air-local`. Le manifeste et la marketplace sont validés par la CLI Claude Code. Cela ne constitue ni une inscription à la marketplace officielle Anthropic ni une recette native de conception dans Claude. La connexion MCP reste configurée par projet.
 
-[Plugin instructions](plugins/air-local/README.md) · [Privacy](PRIVACY.md) · [Terms](TERMS.md) · [Support](SUPPORT.md) · [Submission preparation](submission/README.md)
+## Utiliser avec ChatGPT
+
+Le plugin guide le travail, mais ChatGPT doit pouvoir accéder à votre moteur via une connexion MCP distante autorisée. Il ne peut pas lancer un MCP stdio sur votre poste à travers le chat. L’installation des skills n’accorde aucun accès au référentiel.
+
+La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.8** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
+
+## Ce que vous pouvez demander
+
+> « Fais le lien entre ce besoin, les parcours concernés et les blocs à réaliser. »
+>
+> « Explique cette décision et ses conséquences pour l’équipe projet. »
+>
+> « Vérifie la préparation et régénère le dossier avec ses questions ouvertes. »
+
+Le skill vérifie les outils réellement disponibles. Les fonctions récentes de News et d’actualisation vidéo nécessitent le moteur de développement 0.35 qui les expose ; le moteur public rc9 ne les contient pas. Un atelier vidéo optionnel est nécessaire pour les MP4. Le plugin ne promet aucune connexion ou fonction absente du catalogue.
+
+## Données, versions et contribution
+
+Ce dépôt contient les skills, manifests, logo et guides. Le moteur, ses versions et ses qualifications sont séparés. Aucun identifiant, base entreprise ou endpoint MCP partagé n’est distribué. Les extraits envoyés à un modèle cloud suivent les règles de votre organisation et du fournisseur.
+
+Télécharger le paquet et son manifeste SHA-256 depuis [Releases](https://github.com/yannickhuchard/air-plugin/releases). Pour contribuer : `python scripts/build_plugin.py --output-dir dist/plugin`, puis `python -m pytest -q tests/test_plugin_package.py`. Aucune CI automatique n’est activée.
+
+[Licence](LICENSE) · [Confidentialité](PRIVACY.md) · [Conditions](TERMS.md) · [Distribution](DISTRIBUTION.md) · [Soumission](submission/README.md)
+
+Le format Claude et les commandes de marketplace suivent la [documentation officielle Claude Code](https://code.claude.com/docs/en/plugin-marketplaces). La prise en charge du MCP local diffère entre Code, Cowork et chat : [guide Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude).
