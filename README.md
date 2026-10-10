@@ -37,7 +37,7 @@ Pour essayer le clone sans installation : `claude --plugin-dir ./plugins/air-loc
 
 Le plugin guide le travail, mais ChatGPT doit pouvoir accéder à votre moteur via une connexion MCP distante autorisée. Il ne peut pas lancer un MCP stdio sur votre poste à travers le chat. L’installation des skills n’accorde aucun accès au référentiel.
 
-La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.9** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
+La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.10** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
 
 ## Ce que vous pouvez demander
 
@@ -50,6 +50,8 @@ La dernière observation de soumission conservée, le **1er octobre 2026**, est 
 Le skill vérifie les outils réellement disponibles. Les fonctions récentes de News et d’actualisation vidéo nécessitent le moteur de développement 0.35 qui les expose ; le moteur public rc9 ne les contient pas. Un atelier vidéo optionnel est nécessaire pour les MP4. Le plugin ne promet aucune connexion ou fonction absente du catalogue.
 
 Le skill 0.1.9 ajoute les profils contextuels et les contrats JSON/HTTP du moteur 0.35.0.dev2 : diagnostic des dimensions absentes, suite de construction et vérification d’échanges fournis. Les exclusions demandent une revue effective, les exemples ne prouvent pas un service déployé. [Guide des contrats](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-b-profils-et-contrats.md).
+
+Le skill 0.1.10 guide les paquets de construction du moteur 0.35.0.dev3 : périmètre exact, responsabilités R et A, questions et réceptions authentifiées. Un mandat serveur est nécessaire, aucune approbation humaine ne peut être inventée. [Guide de transmission](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-c-transmission-equipes.md).
 
 ## Données, versions et contribution
 
