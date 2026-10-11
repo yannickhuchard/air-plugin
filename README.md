@@ -37,7 +37,7 @@ Pour essayer le clone sans installation : `claude --plugin-dir ./plugins/air-loc
 
 Le plugin guide le travail, mais ChatGPT doit pouvoir accéder à votre moteur via une connexion MCP distante autorisée. Il ne peut pas lancer un MCP stdio sur votre poste à travers le chat. L’installation des skills n’accorde aucun accès au référentiel.
 
-La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.10** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
+La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.11** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
 
 ## Ce que vous pouvez demander
 
@@ -62,3 +62,5 @@ Télécharger le paquet et son manifeste SHA-256 depuis [Releases](https://githu
 [Licence](LICENSE) · [Confidentialité](PRIVACY.md) · [Conditions](TERMS.md) · [Distribution](DISTRIBUTION.md) · [Soumission](submission/README.md)
 
 Le format Claude et les commandes de marketplace suivent la [documentation officielle Claude Code](https://code.claude.com/docs/en/plugin-marketplaces). La prise en charge du MCP local diffère entre Code, Cowork et chat : [guide Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude).
+
+Le skill 0.1.11 guide la recherche bornée de contre-exemples et les preuves à reprendre avec le moteur 0.35.0.dev4. [Guide des comportements et changements](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-d-verification-impact.md). Aucun résultat ne prouve le logiciel futur ou la conformité globale.
