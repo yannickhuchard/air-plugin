@@ -1,66 +1,141 @@
-# AIR · Architecture Workspace
+# AIR plugin · Architecture Workspace
 
-<img src="plugins/air-local/assets/logo.png" alt="Logo AIR" width="112">
+<img src="plugins/air-local/assets/logo.png" alt="AIR logo" width="112">
 
-**Concevez un dossier d’architecture clair et vérifiable avec votre assistant agentique.**
+**Give your AI assistant a workflow for designing, checking and explaining an architecture.**
 
-AIR relie besoins métier, composants, données, décisions et preuves. Ce plugin fournit les skills pour installer le moteur puis faire progresser le dossier, question par question. Créé par **Yannick Huchard**, sous [Apache-2.0](LICENSE).
+AIR connects business needs, user journeys, components, data, decisions and
+evidence. These skills guide your assistant through that work, from installation
+to the **Projet d’architecture** website and the handoff to builders.
+Created by **Yannick Huchard**, under [Apache-2.0](LICENSE).
 
-[Découvrir le moteur](https://github.com/yannickhuchard/air-engine) · [Guide du plugin](plugins/air-local/README.md) · [Vidéos](videos) · [Support](SUPPORT.md)
+[Install the plugin](#install-the-published-plugin) ·
+[Prepare your agent](docs/agent-quickstart.md) ·
+[Engine](https://github.com/yannickhuchard/air-engine) ·
+[Support](SUPPORT.md)
 
-## Votre premier parcours
+## What belongs in each repository?
 
-1. Installer le [moteur AIR](https://github.com/yannickhuchard/air-engine) avec Python 3.11+ : `python scripts/install.py --start`. Pas de Docker ni cloud obligatoire.
-2. Installer ce plugin avec le parcours de votre client ci-dessous.
-3. Demander : **« Utilise AIR pour connecter ce projet, puis montre-moi ce qui manque dans le dossier. Pose les questions une par une. »**
-4. Lire les sources, décider, vérifier avec AIR et générer les livrables. Les trois exemples Asteria du moteur permettent de découvrir ce cycle.
+| Repository | Contains | Install it for |
+| --- | --- | --- |
+| **air-plugin**, this repository | Skills, manifests, branding and client setup guidance | The assistant's AIR workflow |
+| [air-engine](https://github.com/yannickhuchard/air-engine) | Python engine, CLI/API/MCP, examples and technical guides | Model storage, checks, simulations and generated deliverables |
+| Your architecture repository | Your sources, drafts, selected baselines and generated files | The actual solution you are designing |
 
-## Installer dans Codex
+The plugin does not contain the engine, customer data or an authorized server
+connection. Install the engine separately and connect the intended project.
+Python 3.11+, SQLite and local authentication suffice for the default engine setup.
 
-```text
+## Start with a task, not a command catalogue
+
+| You want to | Ask the assistant |
+| --- | --- |
+| Get started | “Install and connect AIR for this authorized project, then verify the setup.” |
+| Design a solution | “Turn these needs into a sourced architecture and explain what is missing.” |
+| Review a decision | “Show the alternatives, consequences and evidence behind this choice.” |
+| Prepare construction | “Check the component contracts and prepare the versioned builder handoff.” |
+| Assess a change | “Compare these exact baselines and identify the evidence to revisit.” |
+
+The two skills are [air-local-setup](plugins/air-local/skills/air-local-setup/SKILL.md)
+and [air-local-design](plugins/air-local/skills/air-local-design/SKILL.md).
+The assistant prepares the design; the separately installed engine checks the
+declared model. A design check does not prove that the future application runs.
+
+## Install the published plugin
+
+The primary package in this repository is **project-MCP skill version 0.1.11**.
+Its published companion engine is **0.35.0.dev4**. Verify the installed engine's
+catalogue for the features you intend to use. Engine and plugin versions are
+independent; [releases](https://github.com/yannickhuchard/air-plugin/releases)
+retain their own archives and checksums.
+
+### ChatGPT desktop and Codex CLI
+
+Register the repository marketplace with an installed Codex CLI:
+
+```sh
 codex plugin marketplace add yannickhuchard/air-plugin --ref main
-codex plugin add air-local@air-official
+codex plugin marketplace list
 ```
 
-## Installer dans Claude Code
+Install `air-local` from **air-official** using the client plugin browser. In
+Codex CLI, open `/plugins`; in ChatGPT desktop, open **Plugins**. Start a new
+session after installation. For a local checkout instead of a registered Git
+source, open the cloned repository as a project: its
+`.agents/plugins/marketplace.json` points to `plugins/air-local`.
 
-Dans une session Claude Code :
+The [official marketplace guide](https://developers.openai.com/plugins/build/plugins#install-a-local-plugin-manually)
+describes local catalogue discovery. The
+[client plugin guide](https://learn.chatgpt.com/docs/plugins) describes installation
+and supported surfaces. Account and workspace availability still apply.
+Registration does not establish a project MCP connection.
 
-```text
-/plugin marketplace add yannickhuchard/air-plugin
-/plugin install air-local@air-official
+### Other agent platforms
+
+A client with a project MCP configuration can connect to AIR using the engine's
+[MCP guide](https://github.com/yannickhuchard/air-engine/blob/main/docs/mcp.md).
+Use the client's supported skill format or read the skills as the workflow guide.
+For Claude Code, this repository also retains a [compatibility marketplace](.claude-plugin/marketplace.json)
+and package manifest; use the client's current installation documentation.
+Native support depends on the client; a compatible JSON file alone is not a test.
+
+The Codex IDE extension does not install plugins through this plugin browser.
+Use a supported desktop/CLI surface for plugin installation, or configure the
+engine's CLI/MCP and supported skills directly in the IDE.
+
+### Local CLI candidate and public-directory status
+
+`variants/air-local-cli` preserves the **0.1.7 review candidate** and its historical
+submission material. It is separate from the primary project-MCP package and
+does not bundle a local executor or the engine. Follow its dated review record;
+do not assume it is the newer CLI package described in development discussions.
+
+No successful public OpenAI-directory publication is confirmed by this README.
+The [submission records](submission/README.md) are dated observations, not a live
+status check. A public GitHub package can be installed through its supported
+marketplace route independently of directory publication.
+
+## Connect the engine and begin
+
+1. Follow the [engine installation quickstart](https://github.com/yannickhuchard/air-engine#install-and-verify-the-engine)
+   or ask your authorized local agent to install it. Use a dedicated directory.
+2. Give setup the engine location, private home, port, credential filename and
+   architecture project. The program reads credentials; never paste their values.
+3. Configure the project MCP connection and verify its authenticated identity,
+   version and filtered tools. A cloud chat needs an authorized remote service;
+   it cannot reach your computer by using its own `localhost`.
+4. Read the exact project baseline, prepare changes and generate the architecture
+   website. An empty installation needs a project first; it does not create your
+   business model automatically.
+
+> Use air-local-setup to connect this authorized AIR project. Once verified,
+> use air-local-design to develop the architecture, keep sources and decisions,
+> identify missing information, run the supported checks and prepare the handoff.
+
+The [agent runbook](docs/agent-quickstart.md) gives platform integrators the setup
+inputs, verification sequence and design loop. Video rendering remains optional.
+
+## Data, help and contribution
+
+Keep separate homes and identities for different clients. Local registries do
+not automatically synchronize. Use only data your organization permits the
+chosen model to process; installation grants no additional business permissions.
+
+For a problem, include the plugin version, engine version, client, connection
+mode, failing command/tool and a fictional minimal example in
+[an issue](https://github.com/yannickhuchard/air-plugin/issues). Exclude secrets
+and customer material. See [SUPPORT.md](SUPPORT.md) for support expectations.
+
+To build the primary package from this repository:
+
+```sh
+python scripts/build_plugin.py --output-dir dist/plugin
+python -m pytest -q tests/test_plugin_package.py
 ```
 
-Pour essayer le clone sans installation : `claude --plugin-dir ./plugins/air-local`. Le manifeste et la marketplace sont validés par la CLI Claude Code. Cela ne constitue ni une inscription à la marketplace officielle Anthropic ni une recette native de conception dans Claude. La connexion MCP reste configurée par projet.
+Building produces an archive and SHA-256 receipt; it does not install the engine
+or submit a version to a public directory. This documentation update leaves
+released archives and historical review packages unchanged. No automatic CI is enabled.
 
-## Utiliser avec ChatGPT
-
-Le plugin guide le travail, mais ChatGPT doit pouvoir accéder à votre moteur via une connexion MCP distante autorisée. Il ne peut pas lancer un MCP stdio sur votre poste à travers le chat. L’installation des skills n’accorde aucun accès au référentiel.
-
-La dernière observation de soumission conservée, le **1er octobre 2026**, est **IN_REVIEW pour 0.1.7**, sans publication confirmée. Le paquet source **0.1.11** présenté ici évolue séparément ; un push GitHub ne modifie pas la revue OpenAI.
-
-## Ce que vous pouvez demander
-
-> « Fais le lien entre ce besoin, les parcours concernés et les blocs à réaliser. »
->
-> « Explique cette décision et ses conséquences pour l’équipe projet. »
->
-> « Vérifie la préparation et régénère le dossier avec ses questions ouvertes. »
-
-Le skill vérifie les outils réellement disponibles. Les fonctions récentes de News et d’actualisation vidéo nécessitent le moteur de développement 0.35 qui les expose ; le moteur public rc9 ne les contient pas. Un atelier vidéo optionnel est nécessaire pour les MP4. Le plugin ne promet aucune connexion ou fonction absente du catalogue.
-
-Le skill 0.1.9 ajoute les profils contextuels et les contrats JSON/HTTP du moteur 0.35.0.dev2 : diagnostic des dimensions absentes, suite de construction et vérification d’échanges fournis. Les exclusions demandent une revue effective, les exemples ne prouvent pas un service déployé. [Guide des contrats](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-b-profils-et-contrats.md).
-
-Le skill 0.1.10 guide les paquets de construction du moteur 0.35.0.dev3 : périmètre exact, responsabilités R et A, questions et réceptions authentifiées. Un mandat serveur est nécessaire, aucune approbation humaine ne peut être inventée. [Guide de transmission](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-c-transmission-equipes.md).
-
-## Données, versions et contribution
-
-Ce dépôt contient les skills, manifests, logo et guides. Le moteur, ses versions et ses qualifications sont séparés. Aucun identifiant, base entreprise ou endpoint MCP partagé n’est distribué. Les extraits envoyés à un modèle cloud suivent les règles de votre organisation et du fournisseur.
-
-Télécharger le paquet et son manifeste SHA-256 depuis [Releases](https://github.com/yannickhuchard/air-plugin/releases). Pour contribuer : `python scripts/build_plugin.py --output-dir dist/plugin`, puis `python -m pytest -q tests/test_plugin_package.py`. Aucune CI automatique n’est activée.
-
-[Licence](LICENSE) · [Confidentialité](PRIVACY.md) · [Conditions](TERMS.md) · [Distribution](DISTRIBUTION.md) · [Soumission](submission/README.md)
-
-Le format Claude et les commandes de marketplace suivent la [documentation officielle Claude Code](https://code.claude.com/docs/en/plugin-marketplaces). La prise en charge du MCP local diffère entre Code, Cowork et chat : [guide Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude).
-
-Le skill 0.1.11 guide la recherche bornée de contre-exemples et les preuves à reprendre avec le moteur 0.35.0.dev4. [Guide des comportements et changements](https://github.com/yannickhuchard/air-engine/blob/main/docs/lot-d-verification-impact.md). Aucun résultat ne prouve le logiciel futur ou la conformité globale.
+[Package guide](plugins/air-local/README.md) · [Videos](videos/README.md) ·
+[License](LICENSE) · [Privacy](PRIVACY.md) · [Terms](TERMS.md)
