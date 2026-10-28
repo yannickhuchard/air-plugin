@@ -26,10 +26,10 @@ plugin repository; that script belongs to the engine checkout.
 | Can connect to an authorized remote MCP service | Project-scoped remote connection with its assigned identity |
 | Has no executor or authorized AIR connection | Discuss/prepare design material and leave engine checks pending |
 
-The primary plugin **0.1.11** guides project MCP operations. The local CLI variant
-**0.1.7** is preserved as historical review material; it is not the newer CLI
-candidate referenced in development discussions. Do not install a second variant
-under the same identity by guessing which source a client should load.
+The primary marketplace selects project-MCP **0.1.14**. The direct marketplace
+archive selects Skills-only CLI **0.1.16**, for a local session with an executor
+and a separately installed dev8 engine. The historical **0.1.7** review package
+is preserved separately. Choose one variant in each session.
 
 ## Register and verify the plugin
 
