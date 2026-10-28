@@ -56,7 +56,7 @@ business application. Video rendering is an optional workshop.
 
 ## Version, data and support
 
-**0.1.11** is the version of these skills, independently of the engine.
+**0.1.14** is the version of these skills, independently of the engine.
 Review [published releases](https://github.com/yannickhuchard/air-plugin/releases)
 and the engine's implementation status for compatibility. A GitHub package does
 not establish directory approval or native-client acceptance.
@@ -70,3 +70,12 @@ Independent local installations do not synchronize automatically.
 [Plugin installation](https://github.com/yannickhuchard/air-plugin#install-the-published-plugin) ·
 [Support](https://github.com/yannickhuchard/air-plugin/issues) ·
 [Privacy](https://github.com/yannickhuchard/air-plugin/blob/main/PRIVACY.md)
+
+## Prepare a dossier without a live connection
+
+This source version also provides a [portable file workflow](skills/air-local-design/references/portable-session.md).
+Keep `session.json` between conversations. The registry is preferred when
+available, and file preparation can precede a connection. Engine validation stays
+pending until it actually runs; reconnection prepares a rebase rather than
+overwriting concurrent changes. This source feature is not implied by an older
+public package version.

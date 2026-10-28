@@ -43,8 +43,8 @@ declared model. A design check does not prove that the future application runs.
 
 ## Install the published plugin
 
-The primary package in this repository is **project-MCP skill version 0.1.11**.
-Its published companion engine is **0.35.0.dev4**. Verify the installed engine's
+The primary package in this repository is **project-MCP skill version 0.1.14**.
+Its published companion engine is **0.35.0.dev8**. Verify the installed engine's
 catalogue for the features you intend to use. Engine and plugin versions are
 independent; [releases](https://github.com/yannickhuchard/air-plugin/releases)
 retain their own archives and checksums.
@@ -83,17 +83,29 @@ The Codex IDE extension does not install plugins through this plugin browser.
 Use a supported desktop/CLI surface for plugin installation, or configure the
 engine's CLI/MCP and supported skills directly in the IDE.
 
-### Local CLI candidate and public-directory status
+### ChatGPT desktop with a local executor: CLI 0.1.16
 
-`variants/air-local-cli` preserves the **0.1.7 review candidate** and its historical
-submission material. It is separate from the primary project-MCP package and
-does not bundle a local executor or the engine. Follow its dated review record;
-do not assume it is the newer CLI package described in development discussions.
+Use the **Skills-only CLI 0.1.16** package for a session that executes locally.
+Download [the ready-to-extract marketplace](https://github.com/yannickhuchard/air-plugin/releases/download/v0.1.16/air-local-0.1.16-marketplace.zip)
+and its checksums from [release 0.1.16](https://github.com/yannickhuchard/air-plugin/releases/tag/v0.1.16).
+Extract it, open the `AIR-plugins` root as a local project, restart the desktop
+app, install AIR from **AIR CLI - Distribution directe**, then start a new local chat.
+The [full guide](https://github.com/yannickhuchard/air-engine/blob/main/docs/installation-chatgpt.md)
+explains source installation and verification. Installing this package still
+requires the separately installed AIR engine; its two manifests declare
+`requires_local_executor: true`. The CLI package declares no MCP server.
 
-No successful public OpenAI-directory publication is confirmed by this README.
+The root **air-official** marketplace continues to select project-MCP **0.1.14**.
+The CLI marketplace is a separate source. Choose one route per session to avoid
+loading two variants with the same `air-local` identity.
+
+`variants/air-local-cli` preserves the historical **0.1.7 review package**.
+Its files and released archives are unchanged. New CLI sources live in
+`plugins/air-local-cli` and target the companion dev8 engine.
+
+No successful OpenAI-directory publication is confirmed by this GitHub release.
 The [submission records](submission/README.md) are dated observations, not a live
-status check. A public GitHub package can be installed through its supported
-marketplace route independently of directory publication.
+status check. Local package tests and native-client acceptance remain distinct.
 
 ## Connect the engine and begin
 
@@ -126,16 +138,17 @@ mode, failing command/tool and a fictional minimal example in
 [an issue](https://github.com/yannickhuchard/air-plugin/issues). Exclude secrets
 and customer material. See [SUPPORT.md](SUPPORT.md) for support expectations.
 
-To build the primary package from this repository:
+To build the packages from this repository, use a new output directory:
 
 ```sh
-python scripts/build_plugin.py --output-dir dist/plugin
-python -m pytest -q tests/test_plugin_package.py
+python scripts/build_plugin.py --variant project --output-dir dist/project-0.1.14
+python scripts/build_plugin.py --variant cli --direct-marketplace --output-dir dist/cli-0.1.16
+python -m pytest -q tests/test_plugin_package.py tests/test_plugin_cli.py
 ```
 
 Building produces an archive and SHA-256 receipt; it does not install the engine
-or submit a version to a public directory. This documentation update leaves
-released archives and historical review packages unchanged. No automatic CI is enabled.
+or submit a version to a public directory. Existing
+released archives and historical review packages remain unchanged. No automatic CI is enabled.
 
 [Package guide](plugins/air-local/README.md) · [Videos](videos/README.md) ·
 [License](LICENSE) · [Privacy](PRIVACY.md) · [Terms](TERMS.md)
